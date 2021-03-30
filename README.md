@@ -1,6 +1,6 @@
-# laravelProject
+# Walk my Pet
 
-<img src="" width="100%">
+<img src="https://media.giphy.com/media/l2Jef0umWXJsNP0lO/giphy.gif" width="100%">
 
 School assignment with purpose of getting a better understanding of writing backend applications.
 
