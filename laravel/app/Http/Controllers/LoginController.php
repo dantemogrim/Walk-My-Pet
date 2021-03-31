@@ -21,7 +21,6 @@ class LoginController extends Controller
     }
 }
 
-
 /* Original in backlog */
 
 /* I Todo app:

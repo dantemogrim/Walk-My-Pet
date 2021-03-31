@@ -24,7 +24,7 @@ class CreateTaskTest extends TestCase
         $response = $this
             ->actingAs($user)
             ->post('tasks', [
-                'description' => 'Finish writing this test'
+                'description' => 'Finish writing this test',
             ]);
 
         $this->assertDatabaseHas('tasks', ['description' => 'Finish writing this test']);

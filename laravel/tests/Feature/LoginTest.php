@@ -31,7 +31,7 @@ class LoginTest extends TestCase
         $response = $this
             ->followingRedirects()
             ->post('login', [
-                'email' => 'example@yrgo.se',
+                'email'    => 'example@yrgo.se',
                 'password' => '123',
             ]);
 
