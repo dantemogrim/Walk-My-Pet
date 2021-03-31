@@ -13,7 +13,7 @@ class CreateTaskController extends Controller
     public function __invoke(Request $request)
     {
         $this->validate($request, [
-            'description' => 'required|string|min:10'
+            'description' => 'required|string|min:10',
         ]);
 
         $task = new Task();

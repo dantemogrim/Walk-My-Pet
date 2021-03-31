@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
@@ -14,7 +13,7 @@ class DashboardController extends Controller
         $user = Auth::user();
 
         return view('dashboard', [
-            'user' => $user
+            'user' => $user,
         ]);
     }
 }
