@@ -22,10 +22,21 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'index')->name('login')->middleware('guest');
 Route::post('login', LoginController::class);
 
+
+Route::view('/', 'index')->name('register')->middleware('guest');
 Route::post('register', RegisterController::class);
+
+
+
+
+
+
+
 Route::get('logout', LogoutController::class);
 Route::get('dashboard', DashboardController::class)->middleware('auth');
 Route::post('tasks', CreateTaskController::class)->middleware('auth');
 Route::patch('tasks/{task}/complete', CompleteTaskController::class)->middleware('auth');
 
-Route::view('/', 'index')->name('register')->middleware('guest');
+
+
+// Route::view('/', 'index')->name('register')->middleware('guest');
