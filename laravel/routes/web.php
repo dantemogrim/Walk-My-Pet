@@ -35,4 +35,13 @@ Route::get('dashboard', DashboardController::class)->middleware('auth');
 Route::post('tasks', CreateTaskController::class)->middleware('auth');
 Route::patch('tasks/{task}/complete', CompleteTaskController::class)->middleware('auth');
 
+/* Route Utkast! Förstår inte helt name()-grejen och editpet controller finns ej, kanske ska ha en enda EditProfileController? /Sandra
+* Route::view('profile')->name('add-pet')->middleware('auth');
+* Route::post('profile', AddPetController::class)->middleware('auth');
+*
+* Route::view('profile')->name('edit-pet')->middleware('auth');
+* Route::post('profile', EditPetController::class)->middleware('auth');
+*/
+
+
 // Route::view('/', 'index')->name('register')->middleware('guest');
