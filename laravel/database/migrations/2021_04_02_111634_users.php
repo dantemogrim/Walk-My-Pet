@@ -22,9 +22,11 @@ class Users extends Migration
             $table->string('info')->nullable();
             $table->string('profile_img')->nullable();
             $table->string('neighborhood')->nullable();
-            $table->boolean('pet_owner')->nullable();
-            $table->boolean('pet_walker')->nullable();
+            $table->string('pet_owner')->nullable();
+            $table->string('pet_walker')->nullable();
             $table->timestamps();
         });
     }
 }
+
+// Notera pet -> string just nu istället från Boolean. Bytte datatyp manuellt i databasen under 'structure'.
