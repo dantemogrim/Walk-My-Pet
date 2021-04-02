@@ -26,7 +26,10 @@ Route::post('login', LoginController::class);
 Route::view('/', 'index')->name('register')->middleware('guest');
 Route::post('register', RegisterController::class);
 
-
+// Register page
+Route::get('/register', function () {
+    return view('register');
+});
 
 
 
