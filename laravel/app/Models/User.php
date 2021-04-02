@@ -22,13 +22,12 @@ class User extends Authenticatable
         'profile_img',
         'neighborhood',
         'pet_owner',
-        'pet_walker'
+        'pet_walker',
     ];
 
     protected $hidden = [
         'password',
     ];
-
 
     public function tasks()
     {
