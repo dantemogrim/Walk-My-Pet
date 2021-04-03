@@ -10,7 +10,7 @@ class AddPetController extends Controller
     public function __invoke(Request $request)
     {
         $this->validate($request, [
-            'name' => ['required', 'string', 'min:1'],
+            'name'    => ['required', 'string', 'min:1'],
             'species' => ['required', 'string'],
             // Not needed for db input
 

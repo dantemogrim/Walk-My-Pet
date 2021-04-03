@@ -28,9 +28,8 @@ class Pet extends Model
 
     // Ska det finnas en motsvarande relation på User model? Vet inte om det innebär
     // att en User _måste_ ha en Pet eller om den _kan_ ha en Pet och isf max 1.
-     public function owners()
+    public function owners()
     {
         return $this->hasOne(User::class);
     }
-
 }

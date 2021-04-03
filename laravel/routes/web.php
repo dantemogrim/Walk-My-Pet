@@ -43,5 +43,4 @@ Route::patch('tasks/{task}/complete', CompleteTaskController::class)->middleware
 * Route::post('profile', EditPetController::class)->middleware('auth');
 */
 
-
 // Route::view('/', 'index')->name('register')->middleware('guest');
