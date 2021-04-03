@@ -33,4 +33,13 @@ class User extends Authenticatable
     {
         return $this->hasMany(Task::class);
     }
+
+    /* Nu finns en hasOne relation i Pet model, ska det finnas en motsvarande relation på User model?
+    Vet inte om det innebär att en User _måste_ ha en Pet eller om den _kan_ ha en Pet och isf max 1.
+    Typ:
+     public function pets()
+    {
+        return $this->hasOne(Pet::class);
+    }
+     */
 }

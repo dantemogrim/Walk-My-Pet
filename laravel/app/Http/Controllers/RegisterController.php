@@ -12,13 +12,13 @@ class RegisterController extends Controller
     public function __invoke(Request $request)
     {
         $this->validate($request, [
-            'name'     => ['required', 'string', 'max:18', 'unique:users,name'],
-            'email'    => ['required', 'email', 'unique:users,email'],
-            'password' => ['required', 'string', 'min:3'],
-            'phone' => ['integer', 'min:10'],
+            'name'         => ['required', 'string', 'max:18', 'unique:users,name'],
+            'email'        => ['required', 'email', 'unique:users,email'],
+            'password'     => ['required', 'string', 'min:3'],
+            'phone'        => ['integer', 'min:10'],
             'neighborhood' => ['string', 'max: 24'],
-            'pet_walker' => ['required', 'string', 'max:3'],
-            'pet_owner' => ['required', 'string', 'max:3']
+            'pet_walker'   => ['required', 'string', 'max:3'],
+            'pet_owner'    => ['required', 'string', 'max:3'],
 
         ]);
 
@@ -37,3 +37,5 @@ class RegisterController extends Controller
         return redirect('dashboard');
     }
 }
+
+// Neighborhood fungerar
