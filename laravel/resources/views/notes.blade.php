@@ -14,7 +14,27 @@ Kan säkert lösas sen, men datan går in. En fördel med detta är dock att kun
 ////////////////
 2. Sandra
 
+// owner_id foreign key (1 rad):
+// $table->foreignId('owner_id')->constrained('users');
+
 
 
 
 3. Dante --}}
+
+
+
+
+<!--KÄKAR LITE BRB-->
+
+
+
+<!-- TISDAG
+
+1. Resten av pet-data (ERIK)
+2. Fixa Laravel Mix (ERIK)
+3. Bestämma val av css bootstrap/tailwind css osv.(DANTE)
+4. Edit user (DANTE, senare)
+5.
+
+-->

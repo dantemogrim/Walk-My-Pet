@@ -3,7 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+// use Illuminate\Foundation\Auth\Pet as Authenticatable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 
 class Pet extends Model
 {
@@ -12,13 +14,9 @@ class Pet extends Model
     protected $fillable = [
         'name',
         //'owner_id' --> inte fillable kanske?
-        // 'email',
-        // 'password',
-        // 'phone',
-        'info',
         'species',
+        'info',
         'profile_img',
-        // 'neighborhood',
     ];
 
     /* Docs: Eloquent will assume that each model's corresponding database table has a primary key
@@ -33,3 +31,30 @@ class Pet extends Model
         return $this->hasOne(User::class);
     }
 }
+
+
+
+
+
+// <?php
+
+// declare(strict_types=1);
+
+// namespace App\Models;
+
+// use Illuminate\Database\Eloquent\Factories\HasFactory;
+// use Illuminate\Foundation\Auth\Pet as Authenticatable;
+// use Illuminate\Notifications\Notifiable;
+
+// class Pet extends Authenticatable
+// {
+//     use HasFactory;
+//     use Notifiable;
+
+//     protected $fillable = [
+//         'name',
+//         'species',
+//         'info',
+//         'profile_img',
+
+//     ];

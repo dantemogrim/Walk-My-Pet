@@ -28,5 +28,3 @@ class Users extends Migration
         });
     }
 }
-
-// Notera pet -> string just nu istället från Boolean. Bytte datatyp manuellt i databasen under 'structure'.
