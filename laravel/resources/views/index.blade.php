@@ -1,4 +1,4 @@
-@extends('layouts.head')
+@extends('layouts.app')
 @include('errors')
 <h1>Welcome to Walk-My-Pet</h1>
 <h2>Log in to your account</h2><hr>
