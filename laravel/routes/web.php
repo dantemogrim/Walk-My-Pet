@@ -18,19 +18,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// show Login if no url params
-Route::view('/', 'index')->middleware('guest');
 
-// show Login if login as url param
 Route::view('/', 'index')->name('login')->middleware('guest');
 Route::post('login', LoginController::class);
 
-// Route::view('/', 'index')->name('register')->middleware('guest');
-Route::view('/register', 'register')->name('register')->middleware('guest');
+Route::view('/', 'index')->name('register')->middleware('guest');
 Route::post('register', RegisterController::class);
 
-// Register page (Docs: "If your route only needs to return a view,
-// you may use the Route::view method" --> så ovan Route::view ~borde~ räcka)
+// Register page
 Route::get('/register', function () {
     return view('register');
 });
