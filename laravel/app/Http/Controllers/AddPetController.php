@@ -13,9 +13,9 @@ class AddPetController extends Controller
     public function __invoke(Request $request)
     {
         $this->validate($request, [
-            'pet-name' => ['required', 'string'],
-            'pet-info' => ['required', 'string', 'max:80'],
-            'pet-species'  => ['required', 'string', 'max:12']
+            'pet-name'     => ['required', 'string'],
+            'pet-info'     => ['required', 'string', 'max:80'],
+            'pet-species'  => ['required', 'string', 'max:12'],
         ]);
 
         $pet = new Pet();
@@ -25,7 +25,6 @@ class AddPetController extends Controller
         $pet->species = $request->input('pet-species');
         // $pet->profile_img = $request->input('pet-img');
         $pet->save();
-
 
         return redirect('dashboard');
     }

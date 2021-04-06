@@ -1,13 +1,13 @@
 <?php
 
+use App\Http\Controllers\AddPetController;
 use App\Http\Controllers\CompleteTaskController;
 use App\Http\Controllers\CreateTaskController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\AddPetController;
-use App\Http\Controllers\UpdateUserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UpdateUserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,8 +23,6 @@ use Illuminate\Support\Facades\Route;
     you may use the Route::view method"
 |
 */
-
-
 
 /* --- [ LOGIN SYSTEM ] --- */
 
@@ -45,13 +43,11 @@ Route::get('/register', function () {
 // LOGOUT
 Route::get('logout', LogoutController::class);
 
-
 /* --- [ UPDATE USER SETTINGS ] --- */
 
 // UPDATE USER
 Route::post('accountsettings', UpdateUserController::class);
 Route::view('/accountsettings', 'accountsettings')->name('accountsettings')->middleware('auth');
-
 
 // ADD PET
 Route::post('add-pet', AddPetController::class);
@@ -60,38 +56,18 @@ Route::view('/accountsettings', 'accountsettings')->name('accountsettings')->mid
 //     return view('accountsettings');
 // });
 
-
 /* --- [ TASKS ] --- */
 
 // TASKS
 Route::post('tasks', CreateTaskController::class)->middleware('auth');
 Route::patch('tasks/{task}/complete', CompleteTaskController::class)->middleware('auth');
 
-
 /* --- [ OTHER VIEWS/PAGES ] --- */
 
 // MAIN PAGE
 Route::get('dashboard', DashboardController::class)->middleware('auth');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Route::post('edit-pets', EditPetController::class)->middleware('auth');
-
-
 
 /* Route Utkast! Förstår inte helt name()-grejen och editpet controller finns ej, kanske ska ha en enda EditProfileController? /Sandra
 * Route::view('accountsettings')->name('profile')->middleware('auth');
