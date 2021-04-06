@@ -29,9 +29,16 @@ class User extends Authenticatable
         'password',
     ];
 
+    // Retrieve users tasks.
     public function tasks()
     {
         return $this->hasMany(Task::class);
+    }
+
+    // Retrieve users pets.
+    public function pets()
+    {
+        return $this->hasMany(Pet::class);
     }
 
     /* Nu finns en hasOne relation i Pet model, ska det finnas en motsvarande relation på User model?
