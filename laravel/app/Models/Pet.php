@@ -32,10 +32,6 @@ class Pet extends Model
     }
 }
 
-
-
-
-
 // <?php
 
 // declare(strict_types=1);

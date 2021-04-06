@@ -13,7 +13,6 @@ class RegisterController extends Controller
 {
     public function __invoke(Request $request)
     {
-
         $this->validate($request, [
             'email'        => ['required', 'email', 'unique:users,email'],
             'password'     => ['required', 'string', 'min:3'],
@@ -31,8 +30,6 @@ class RegisterController extends Controller
         Auth::login($user);
 
         return redirect('dashboard');
-
-
 
         //TIS6APRIL
         // $this->validate($request, [
@@ -70,7 +67,6 @@ class RegisterController extends Controller
         //TIS6APRIL
     }
 }
-
 
 // Kommenterat ut det som inte används just nu. Confirm password fungerar med
 // inget meddelande just nu.
