@@ -13,6 +13,7 @@ class CreateTasksTable extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
             $table->string('description');
+            // Foreign key to our Users tables 'id' column.
             $table->unsignedInteger('user_id');
             $table->boolean('completed')->default(false);
             $table->timestamps();

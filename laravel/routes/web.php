@@ -26,7 +26,8 @@ use Illuminate\Support\Facades\Route;
 
 /* --- [ LOGIN SYSTEM ] --- */
 
-// LOGIN
+// START PAGE + LOGIN
+Route::view('/', 'index');
 Route::view('/', 'index')->name('login')->middleware('guest');
 Route::post('login', LoginController::class);
 Route::get('/login', function () {
@@ -35,7 +36,7 @@ Route::get('/login', function () {
 
 // REGISTER
 // Route::view('/', 'register')->name('register')->middleware('guest');
-Route::post('register', RegisterController::class);
+Route::post('register', RegisterController::class)->name('register')->middleware('guest');
 Route::get('/register', function () {
     return view('register');
 });
