@@ -26,20 +26,10 @@
 
 <h1 class="mx-6 mr-3 my-3 font-bold text-3xl">Account settings:</h1>
 
-<!-- User card viewing user's current profile settings. -->
-<h2 class="mx-6 mr-3 my-3 font-bold text-2xl">Your current profile:</h2>
-<div class="bg-green-100 flex flex-col mx-6 shadow rounded">
-    <p class="m-5 font-bold">Name: Name</p>
-    <p class="m-5 font-bold">E-mail: email@email.com</p>
-    <p class="m-5 font-bold">Phone: 012-3456</p>
-    <p class="m-5 font-bold">Info: Bla bla.</p>
-</div>
-
-
 
 <!-- Edit user settings. -->
-<h2 class="mx-6 mr-3 my-6 font-bold text-2xl">Edit user settings:</h2>
-<form class="mx-6 pt-6 ml-6 bg-white shadow rounded col-span-2 max-w-screen-sm" action="accountsettings" method="post">
+<h2 class="mx-6 mr-3 my-3 font-bold text-2xl">Edit user settings:</h2>
+<form class="pt-6 ml-6 bg-white shadow rounded col-span-2 max-w-screen-sm" action="accountsettings" method="post">
         @csrf
         <div>
             <label class="m-5 font-semibold mr-1" for="name">Name:</label>
@@ -78,7 +68,7 @@
         <button class="m-5 mr-4 py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Update</button>
 </form>
 
-<hr class="w-auto h-4 bg-blue-200">
+<hr class="w-auto h-2 mt-10 bg-blue-200">
 <br>
 
 
@@ -91,12 +81,12 @@
             <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="pet-name" id="pet-name" type="pet-name" placeholder="Doggo" />
         </div>
         <div>
-            <div>
+
                 <label class="m-5 font-semibold mr-1" for="info">Info:</label>
                 <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="pet-info" id="pet-info" type="pet-info" placeholder="Loves fetch."/>
             </div>
             <div>
-                <div>
+
                     <label class="m-5 font-semibold mr-1" for="species">Species:</label>
                     <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="pet-species" id="pet-species" type="pet-species" placeholder="Dog, Shiba Inu." />
                 </div>
@@ -106,8 +96,7 @@
             <button class="m-5 mr-4 py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Update</button>
     </form>
 <br>
-<hr class="w-auto h-4 bg-blue-200">
 
-<a href="/dashboard"><button class="m-5 mr-4 py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Back</button></a>
+<a href="/dashboard"><button class="mb-5 ml-6 py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Back</button></a>
 <!-- Full page background wrapper - end.  -->
 </div>

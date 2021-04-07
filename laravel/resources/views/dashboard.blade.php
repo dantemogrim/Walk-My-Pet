@@ -29,28 +29,31 @@
             <a href="logout"><button class="m-5 mr-4 py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Logout</button></a>
     </div>
     </div>
+    <!-- Main area. -->
 
     <h1 class="m-5 my-5 font-bold text-3xl">Welcome, {{ $user->name }}!</h1>
     <h2 class="m-5 my-1 font-bold text-xl">Here you can find all of our registered walkers and pet owners.</h2>
     <h2 class="m-5 my-1 font-bold text-xl">Good luck and have fun!</h2>
 
-
+<!-- Logged in user's data first up. -->
+{{-- @foreach ($user->pets as $pet)
+<li>{{ $pet->name }}</li>
+@endforeach --}}
 
 
 
 <!-- TEMPLATE - TODO: USER CARD. -->
-<article class="my-6 p-5 shadow rounded mt-5 mx-20 bg-blue-300">
+<article class="my-6 p-5 shadow rounded mt-5 mx-20 bg-green-100">
     <ul>
 
         <li>
-            <p class="m-2">Name: {{ $user->name }}</p>
-            <p class="m-2">E-mail: {{ $user->email }}</p>
-            <p class="m-2">Phone: +46 {{ $user->phone }}</p>
-            <p class="m-2">Info: {{ $user->info }}</p>
-            <p class="m-2">(profile img) -> To the right</p>
-            <p class="m-2">Neighborhood: {{ $user->neighborhood }}</p>
-            <p class="m-2">Pet owner: {{ $user->pet_owner }}</p>
-            <p class="m-2">Pet walker: {{ $user->pet_walker }}</p>
+            <p class="m-2"><b>Name:</b> {{ $user->name }}</p>
+            <p class="m-2"><b>E-mail:</b> {{ $user->email }}</p>
+            <p class="m-2"><b>Phone:</b> +46 {{ $user->phone }}</p>
+            <p class="m-2"><b>Info:</b> {{ $user->info }}</p>
+            <p class="m-2"><b>Neighborhood:</b> {{ $user->neighborhood }}</p>
+            <p class="m-2"><b>Pet owner:</b> {{ $user->pet_owner }}</p>
+            <p class="m-2"><b>Pet walker:</b> {{ $user->pet_walker }}</p>
         </li>
 
     </ul>
