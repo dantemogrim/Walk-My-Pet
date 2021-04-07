@@ -62,7 +62,7 @@
 
         <li>
 
-            <p class="m-2">Name: {{ $pet->name }}</p>
+
             <p class="m-2">E-mail: {{ $user->name }}</p>
             <p class="m-2">Phone: {{ $user->name }}</p>
             <p class="m-2">Info: {{ $user->name }}</p>
