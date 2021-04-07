@@ -26,7 +26,7 @@ class CreateTasksTable extends Migration
     }
 }
 
-/* UTKAST för 'bokningssystem'
+/* UTKAST för 'bokningssystem', ej testat än
 Schema::create('tasks', function (Blueprint $table) {
             $table->id();
             $table->string('message');

@@ -63,6 +63,9 @@ Route::view('/accountsettings', 'accountsettings')->name('accountsettings')->mid
 Route::post('tasks', CreateTaskController::class)->middleware('auth');
 Route::patch('tasks/{task}/complete', CompleteTaskController::class)->middleware('auth');
 
+// Sandra testar task view
+Route::view('/test-task', 'testTask')->middleware('auth');
+
 /* --- [ OTHER VIEWS/PAGES ] --- */
 
 // MAIN PAGE

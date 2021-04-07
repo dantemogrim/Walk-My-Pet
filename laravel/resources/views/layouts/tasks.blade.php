@@ -1,16 +1,22 @@
-@section('add-task')
-<form action="tasks" method="post">
-    @csrf
-    <label for="description">Task</label>
-    <input name="description" id="description" type="text" />
-    <button type="submit">Create Task</button>
-</form>
-@endsection
+<!-- GAMMAL LOOP FÖR ATT VISA ALLA TASKS.
+SKULLE KUNNA VISAS PÅ DEN GRÖNA RUTAN I DASHBOARD MED ENS EGNA DATA?
+(är inte extended i någon annan fil just nu) -->
 
 @section('tasks')
 <ul>
     @foreach($user->tasks as $task)
     <li>
+    @if ($task->completed)
+        <s>{{ $task->description }} </s>
+        @else
+        @else
+        <form action="tasks/{{ $task->id }}/complete" method="post">
+            @csrf
+            @method('patch')
+            {{ $task->description }}
+            <button type="submit">Complete</button>
+        </form>
+        @endif
     </li>
     @endforeach
 </ul>
