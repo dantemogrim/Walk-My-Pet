@@ -31,7 +31,8 @@ class Pet extends Model
         return $this->hasOne(User::class);
     }
 
-    public function tasks() {
+    public function tasks()
+    {
         return $this->hasMany(Task::class);
     }
 }
