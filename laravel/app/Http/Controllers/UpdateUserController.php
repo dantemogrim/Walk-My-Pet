@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class UpdateUserController extends Controller
 {
+
     public function __invoke(Request $request)
     {
         $this->validate($request, [

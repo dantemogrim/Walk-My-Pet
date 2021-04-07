@@ -5,10 +5,9 @@
         <title>{{ $title ?? 'Walk my Pet' }}</title>
     </head>
 
-    <body class="body-test">
+    <body>
         <header>
             <p>WALK MY PET </p>
-            {{-- <button>Logga ut</button> --}}
 
         </header>
 

@@ -9,28 +9,40 @@
 
     <!-- Header - left side. -->
     <div class="flex items-center p-3">
-    <svg class="ml-1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M240,108a28,28,0,1,1-28-28A28.03146,28.03146,0,0,1,240,108ZM72,108a28,28,0,1,0-28,28A28.03146,28.03146,0,0,0,72,108ZM92,88A28,28,0,1,0,64,60,28.03146,28.03146,0,0,0,92,88Zm72,0a28,28,0,1,0-28-28A28.03146,28.03146,0,0,0,164,88Zm23.0918,60.84473a35.3317,35.3317,0,0,1-16.8418-21.124,43.99839,43.99839,0,0,0-84.5-.00439,35.2806,35.2806,0,0,1-16.7998,21.105,40.00718,40.00718,0,0,0,34.57226,72.05176,64.08634,64.08634,0,0,1,48.86524-.03711,40.0067,40.0067,0,0,0,34.7041-71.99121Z"></path></svg>
+    <a href="/dashboard"><svg class="ml-1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M240,108a28,28,0,1,1-28-28A28.03146,28.03146,0,0,1,240,108ZM72,108a28,28,0,1,0-28,28A28.03146,28.03146,0,0,0,72,108ZM92,88A28,28,0,1,0,64,60,28.03146,28.03146,0,0,0,92,88Zm72,0a28,28,0,1,0-28-28A28.03146,28.03146,0,0,0,164,88Zm23.0918,60.84473a35.3317,35.3317,0,0,1-16.8418-21.124,43.99839,43.99839,0,0,0-84.5-.00439,35.2806,35.2806,0,0,1-16.7998,21.105,40.00718,40.00718,0,0,0,34.57226,72.05176,64.08634,64.08634,0,0,1,48.86524-.03711,40.0067,40.0067,0,0,0,34.7041-71.99121Z"></path></svg></a>
     <p class="inline-block p-3 text-indigo-200">Walk My Pet</p>
     </div>
     <!-- Header - right side. -->
     <div>
         <a href="#" class="inline-block p-3 text-indigo-200 hover:text-indigo-100 mr-2">About</a>
         <a href="#" class="inline-block p-3 text-indigo-200 hover:text-indigo-100 mr-2">Contact</a>
+        <a href="logout"><button class="m-5 mr-4 py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Logout</button></a>
     </div>
     </div>
 
 
 
 
-<h1 class="mr-3 my-3 font-bold text-3xl">Account settings:</h1>
+<h1 class="mx-6 mr-3 my-3 font-bold text-3xl">Account settings:</h1>
 
-<!-- User settings. -->
-<h2 class="text-xl">Edit user settings:</h2>
-<form action="accountsettings" method="post">
+<!-- User card viewing user's current profile settings. -->
+<h2 class="mx-6 mr-3 my-3 font-bold text-2xl">Your current profile:</h2>
+<div class="bg-green-100 flex flex-col mx-6 shadow rounded">
+    <p class="m-5 font-bold">Name: Name</p>
+    <p class="m-5 font-bold">E-mail: email@email.com</p>
+    <p class="m-5 font-bold">Phone: 012-3456</p>
+    <p class="m-5 font-bold">Info: Bla bla.</p>
+</div>
+
+
+
+<!-- Edit user settings. -->
+<h2 class="mx-6 mr-3 my-6 font-bold text-2xl">Edit user settings:</h2>
+<form class="mx-6 pt-6 ml-6 bg-white shadow rounded col-span-2 max-w-screen-sm" action="accountsettings" method="post">
         @csrf
         <div>
-            <label class="font-semibold mr-1" for="name">Name:</label>
-            <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="name" id="name" type="name" />
+            <label class="m-5 font-semibold mr-1" for="name">Name:</label>
+            <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="name" id="name" type="name" placeholder="Person Personson" />
         </div>
         {{-- <div>
             <label for="email">E-mail</label>
@@ -65,26 +77,27 @@
         <button class="m-5 mr-4 py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Update</button>
 </form>
 
-
+<hr class="w-auto h-4 bg-blue-200">
 <br>
 
-<!-- Pet settings. -->
-<h2 class="text-xl">Add a pet:</h2>
-<form action="add-pet" method="post">
+
+<!-- Edit pet settings. -->
+<h2 class="mx-6 mr-3 my-3 font-bold text-2xl">Add a pet:</h2>
+<form class="pt-6 ml-6 bg-white shadow rounded col-span-2 max-w-screen-sm" action="add-pet" method="post">
         @csrf
         <div>
-            <label class="font-semibold mr-1" for="name">Name:</label>
-            <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="pet-name" id="pet-name" type="pet-name" placeholder="What is your name?" />
+            <label class="m-5 font-semibold mr-1" for="name">Name:</label>
+            <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="pet-name" id="pet-name" type="pet-name" placeholder="Doggo" />
         </div>
         <div>
             <div>
-                <label class="font-semibold mr-1" for="info">Info:</label>
-                <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="pet-info" id="pet-info" type="pet-info" placeholder="Tell us something about your"/>
+                <label class="m-5 font-semibold mr-1" for="info">Info:</label>
+                <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="pet-info" id="pet-info" type="pet-info" placeholder="Loves fetch."/>
             </div>
             <div>
                 <div>
-                    <label class="font-semibold mr-1" for="species">Species:</label>
-                    <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="pet-species" id="pet-species" type="pet-species" placeholder="What animal do you have?" />
+                    <label class="m-5 font-semibold mr-1" for="species">Species:</label>
+                    <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="pet-species" id="pet-species" type="pet-species" placeholder="Dog, Shiba Inu." />
                 </div>
                 {{-- <label for="pet-img">Profile image:</label>
                 <input name="pet-img" id="pet-img" type="pet-img"/>
@@ -92,11 +105,8 @@
             <button class="m-5 mr-4 py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Update</button>
     </form>
 <br>
+<hr class="w-auto h-4 bg-blue-200">
 
-
-
-<a href="/dashboard"><button class="m-5 mr-4 py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Back</button></a>
-
-
+<a href="/dashboard"><button class="m-5 mr-4 py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Back</button></a>
 <!-- Full page background wrapper - end.  -->
 </div>

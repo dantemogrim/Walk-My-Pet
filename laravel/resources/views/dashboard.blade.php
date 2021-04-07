@@ -1,5 +1,4 @@
 @extends('layouts.app')
-@extends('layouts.main')
 @include('errors')
 
 <!-- Full page background wrapper. -->
@@ -17,16 +16,78 @@
     <div>
         <a href="#" class="inline-block p-3 text-indigo-200 hover:text-indigo-100 mr-2">About</a>
         <a href="#" class="inline-block p-3 text-indigo-200 hover:text-indigo-100 mr-2">Contact</a>
+
+            <a href="/accountsettings"><button class="m-5 mr-4 py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Account settings</button></a>
+
+            <a href="logout"><button class="m-5 mr-4 py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Logout</button></a>
     </div>
     </div>
 
     <h1 class="m-5 my-5 font-bold text-3xl">Welcome, {{ $user->name }}!</h1>
+    <h2 class="m-5 my-1 font-bold text-xl">Here you can find all of our registered walkers and pet owners.</h2>
+    <h2 class="m-5 my-1 font-bold text-xl">Good luck and have fun!</h2>
 
 
+<!-- TEMPLATE - TODO: WE NEED TO IMPLEMENT A FUNCTIONING FOREACH HERE. -->
+<article class="my-6 p-5 shadow rounded mt-5 mx-20 bg-blue-300">
+    <ul>
 
-    <a href="/accountsettings"><button class="m-5 mr-4 py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Account settings</button></a>
+        <li>
 
-    <a href="logout"><button class="m-5 mr-4 py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Logout</button></a>
+            <p class="m-2">Name: {{ $user->name }}</p>
+            <p class="m-2">E-mail: {{ $user->name }}</p>
+            <p class="m-2">Phone: {{ $user->name }}</p>
+            <p class="m-2">Info: {{ $user->name }}</p>
+            <p class="m-2">(profile img) -> To the right</p>
+            <p class="m-2">Neighborhood: {{ $user->name }}</p>
+            <p class="m-2">Pet owner: {{ $user->name }}</p>
+            <p class="m-2">Pet walker: {{ $user->name }}</p>
+
+        </li>
+
+    </ul>
+</article>
+
+<!-- EXAMPLE - TO BE DELETED -->
+<article class="my-6 p-5 shadow rounded mt-5 mx-20 bg-blue-300">
+    <ul>
+
+        <li>
+
+            <p class="m-2">Name: {{ $user->name }}</p>
+            <p class="m-2">E-mail: {{ $user->name }}</p>
+            <p class="m-2">Phone: {{ $user->name }}</p>
+            <p class="m-2">Info: {{ $user->name }}</p>
+            <p class="m-2">(profile img) -> To the right</p>
+            <p class="m-2">Neighborhood: {{ $user->name }}</p>
+            <p class="m-2">Pet owner: {{ $user->name }}</p>
+            <p class="m-2">Pet walker: {{ $user->name }}</p>
+
+        </li>
+
+    </ul>
+</article>
+
+<!-- EXAMPLE - TO BE DELETED -->
+<article class="my-6 p-5 shadow rounded mt-5 mx-20 bg-blue-300">
+    <ul>
+
+        <li>
+
+            <p class="m-2">Name: {{ $user->name }}</p>
+            <p class="m-2">E-mail: {{ $user->name }}</p>
+            <p class="m-2">Phone: {{ $user->name }}</p>
+            <p class="m-2">Info: {{ $user->name }}</p>
+            <p class="m-2">(profile img) -> To the right</p>
+            <p class="m-2">Neighborhood: {{ $user->name }}</p>
+            <p class="m-2">Pet owner: {{ $user->name }}</p>
+            <p class="m-2">Pet walker: {{ $user->name }}</p>
+
+        </li>
+
+    </ul>
+</article>
+
 
 <!-- Footer. -->
 
