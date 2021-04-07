@@ -51,7 +51,6 @@
             <p class="m-2">Neighborhood: {{ $user->neighborhood }}</p>
             <p class="m-2">Pet owner: {{ $user->pet_owner }}</p>
             <p class="m-2">Pet walker: {{ $user->pet_walker }}</p>
-
         </li>
 
     </ul>
@@ -63,7 +62,7 @@
 
         <li>
 
-            <p class="m-2">Name: {{ $user->name }}</p>
+            <p class="m-2">Name: {{ $pet->name }}</p>
             <p class="m-2">E-mail: {{ $user->name }}</p>
             <p class="m-2">Phone: {{ $user->name }}</p>
             <p class="m-2">Info: {{ $user->name }}</p>

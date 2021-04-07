@@ -1,5 +1,4 @@
 @extends('layouts.app')
-@include('errors')
 
 <!-- Full page background wrapper. -->
 <div class="bg-blue-100 min-h-screen">
@@ -21,11 +20,15 @@
 </div>
 </div>
 
-<h1 class="m-6 ml-6 font-bold text-3xl">Login:</h1>
-<h4 class="m-1 ml-6 font-bold text-l">Are you a person who loves to walk other peoples pets?</h4>
-<h4 class="m-1 ml-6 font-bold text-l">Are you a pet owner who needs someone to walk your pets for you?</h4>
-<h4 class="m-1 ml-6 font-bold text-l">Then you've barked up the right tree! Welcome!</h4>
-<!-- Login + img wrapper. -->
+<!-- Fictional company pitch. -->
+<div class="bg-green-100 w-1/2 p-6 rounded shadow-md my-10 ml-6">
+<p class="m-1 text-m">Do you love to walk other peoples pets?</p>
+<p class="m-1 text-m">Do you have pets that want some bonus walks?</p>
+<p class="m-1 text-m">Then you've barked up the right tree! Welcome!</p>
+</div>
+
+<!-- Login area + img wrapper. -->
+<h1 class="m-1 ml-6 font-bold text-3xl">Login:</h1>
 <div class="bg-blue-100 grid grid-cols-4 gap-7 pt-5">
 
 <!-- Form wrapper. -->
@@ -33,7 +36,7 @@
     @csrf
     <div class="m-4 ml-6">
         <label class="font-semibold mr-1" for="email">E-mail:</label>
-        <input class="bg-white-100 border-green-500 border-2 rounded-sm" name="email" id="email" type="email" placeholder="person@email.com"required/>
+        <input class="bg-white-100 border-green-500 border-2 rounded-sm" name="email" id="email" type="email" placeholder="person@email.com" required/>
     </div>
     <div class="m-4 ml-6">
         <label class="font-semibold mr-1" for="password">Password:</label>
@@ -47,7 +50,7 @@
 
 
 
-
+@include('errors')
 <!-- Footer. -->
 
 

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -36,7 +37,7 @@ class User extends Authenticatable
     }
 
     // Retrieve users pets.
-    public function pets()
+    public function pets(): hasMany
     {
         return $this->hasMany(Pet::class);
     }

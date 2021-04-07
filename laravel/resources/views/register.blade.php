@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+
 <!-- Full page background wrapper. -->
 <div class="bg-blue-100 min-h-screen">
 
@@ -29,7 +30,7 @@
     @csrf
     <div class="m-4 ml-6">
         <label class="font-semibold mr-1" for="name">Name:</label>
-        <input class="bg-white-100 border-green-500 border-2 rounded-sm" name="name" id="name" type="name" placeholder="Person Personson" />
+        <input class="bg-white-100 border-green-500 border-2 rounded-sm" name="name" id="name" type="name" placeholder="Person Personson" required/>
     </div>
     <div class="m-4 ml-6">
         <label class="font-semibold mr-1" for="email">E-mail:</label>
@@ -51,3 +52,4 @@
 <img class="max-w-xs" src="https://media.giphy.com/media/fr4a7HVNfSutlTv02l/giphy.gif">
 
 </div>
+@include('errors')

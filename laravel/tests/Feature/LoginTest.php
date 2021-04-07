@@ -46,6 +46,6 @@ class LoginTest extends TestCase
                 'email' => 'example@yrgo.se',
             ]);
 
-        $response->assertSeeText('Something went horribly wrong :(');
+        $response->assertSeeText('Something went wrong. Please, try again.');
     }
 }
