@@ -12,7 +12,6 @@ class DashboardController extends Controller
     {
         $user = Auth::user();
 
-
         return view('dashboard', [
             'user' => $user,
 

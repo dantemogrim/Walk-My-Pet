@@ -26,7 +26,6 @@ class AddPetController extends Controller
         // $pet->profile_img = $request->input('pet-img');
         $pet->save();
 
-
         return redirect('dashboard');
     }
 }
