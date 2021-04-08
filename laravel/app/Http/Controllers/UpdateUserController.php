@@ -18,9 +18,6 @@ class UpdateUserController extends Controller
             // 'password'     => ['required', 'string', 'min:3'],
         ]);
 
-
-
-
         // DB::table('users')
         //     ->updateOrInsert(
         //         ['name' => 'john@example.com', 'email' => ''],
