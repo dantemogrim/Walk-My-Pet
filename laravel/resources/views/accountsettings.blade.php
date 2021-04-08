@@ -29,7 +29,7 @@
 
 <!-- Edit user settings. -->
 <h2 class="mx-6 mr-3 my-3 font-bold text-2xl">Edit user settings:</h2>
-<form class="pt-6 ml-6 bg-white shadow rounded col-span-2 max-w-screen-sm" action="accountsettings" method="post">
+<form class="pt-6 ml-6 bg-white shadow rounded col-span-2 max-w-screen-sm" action="edit-user" method="post">
         @csrf
         <div>
             <label class="m-5 font-semibold mr-1" for="name">Name:</label>
