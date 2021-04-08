@@ -47,7 +47,7 @@ Route::get('logout', LogoutController::class);
 /* --- [ UPDATE USER SETTINGS ] --- */
 
 // UPDATE USER
-Route::post('accountsettings', UpdateUserController::class);
+Route::post('edit-user', UpdateUserController::class);
 Route::view('/accountsettings', 'accountsettings')->name('accountsettings')->middleware('auth');
 
 // ADD PET
