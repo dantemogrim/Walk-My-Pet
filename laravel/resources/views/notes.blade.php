@@ -3,12 +3,7 @@
 
 1. Erik
 /////////////////
-Phone, neighborhood insertas som det ska. (Ligger atm i reg, men kan flyttas senare till edit profile ex.)
-(User.php, RegisterController.php, User-migration.php)
 
-
-Just nu ligger pet_owner och pet_walker some text istället för boolean. Blev bökigt att fy in som boolean utan att ex svara '1 eller 2'.
-Kan säkert lösas sen, men datan går in. En fördel med detta är dock att kund kan vara både ägare OCH gå med andras djur.
 
 
 ////////////////
@@ -30,3 +25,15 @@ Kan säkert lösas sen, men datan går in. En fördel med detta är dock att kun
 
 
 
+<!-- Erik: UpdateUserController-->
+- use /DB... uppe bland länkarna i Controller (finns i dashboardcontroller)
+- updateOrInsert
+
+<!--Dante: -->
+- Dashboard (pets + user cards)
+
+
+<!--Sandra: delete user controller + delete knapp i accountsettings-->
+
+
+<!--Meddela om ändringar i Web -->

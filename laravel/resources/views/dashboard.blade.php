@@ -35,10 +35,19 @@
     <h2 class="m-5 my-1 font-bold text-xl">Here you can find all of our registered walkers and pet owners.</h2>
     <h2 class="m-5 my-1 font-bold text-xl">Good luck and have fun!</h2>
 
-<!-- Logged in user's data first up. -->
-{{-- @foreach ($user->pets as $pet)
-<li>{{ $pet->name }}</li>
-@endforeach --}}
+
+    @foreach($allUsers as $everyone)
+
+    <li>{{ $everyone->name }}</li>
+
+    @endforeach
+
+
+    @foreach($allPets as $pets)
+
+    <li>{{ $pets->name}}</li>
+
+    @endforeach
 
 
 
