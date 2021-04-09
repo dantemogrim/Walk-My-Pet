@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
 // use Illuminate\Support\Facades\DB;
 
 //Original
@@ -17,7 +18,6 @@ class UpdateUserController extends Controller
             // 'email'        => ['required', 'email', 'unique:users,email'],
             // 'password'     => ['required', 'string', 'min:3'],
         ]);
-
 
         $user = Auth::user();
         $user->name = $request->input('name');
