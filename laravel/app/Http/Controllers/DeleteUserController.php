@@ -11,7 +11,7 @@ class DeleteUserController extends Controller
     public function __invoke(Request $request)
     {
         $this->validate($request, [
-            'delete-check'         => ['required']
+            'delete-check'         => ['required'],
         ]);
 
         $user = Auth::user();
@@ -22,6 +22,5 @@ class DeleteUserController extends Controller
         Auth::logout();
 
         return redirect('/');
-
     }
 }
