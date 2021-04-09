@@ -19,7 +19,6 @@ class UpdateUserController extends Controller
         ]);
 
 
-
         $user = Auth::user();
         $user->name = $request->input('name');
     }

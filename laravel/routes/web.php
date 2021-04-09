@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\AccountSettingsController;
 use App\Http\Controllers\AddPetController;
 use App\Http\Controllers\CompleteTaskController;
 use App\Http\Controllers\CreateTaskController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DeleteUserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
@@ -28,18 +30,23 @@ use Illuminate\Support\Facades\Route;
 
 // START PAGE + LOGIN
 Route::view('/', 'index');
-Route::view('/', 'index')->name('login')->middleware('guest');
+// Onödig med nedan route Route::view('/', 'index')->name('login')->middleware('guest');
+Route::view('/login', 'index')->middleware('guest');
 Route::post('login', LoginController::class);
-Route::get('/login', function () {
-    return view('index');
-});
+
+// Somma som ovan view('/login'):
+//Route::get('/login', function () {
+//     return view('index');
+// });
 
 // REGISTER
-// Route::view('/', 'register')->name('register')->middleware('guest');
+Route::view('/register', 'register')->middleware('guest');
 Route::post('register', RegisterController::class)->name('register')->middleware('guest');
-Route::get('/register', function () {
-    return view('register');
-});
+
+// Onödig:
+//Route::get('/register', function () {
+//     return view('register');
+// });
 
 // LOGOUT
 Route::get('logout', LogoutController::class);
@@ -48,7 +55,12 @@ Route::get('logout', LogoutController::class);
 
 // UPDATE USER
 Route::post('edit-user', UpdateUserController::class);
-Route::view('/accountsettings', 'accountsettings')->name('accountsettings')->middleware('auth');
+
+Route::view('/accountsettings', 'accountsettings')->name('profile')->middleware('auth');
+Route::get('accountsettings', AccountSettingsController::class)->middleware('auth');
+
+// DELETE USER (+ THEIR PETS)
+Route::post('delete-user', DeleteUserController::class);
 
 // ADD PET
 Route::post('add-pet', AddPetController::class);
@@ -60,11 +72,11 @@ Route::view('/accountsettings', 'accountsettings')->name('accountsettings')->mid
 /* --- [ TASKS ] --- */
 
 // TASKS
-Route::post('tasks', CreateTaskController::class)->middleware('auth');
-Route::patch('tasks/{task}/complete', CompleteTaskController::class)->middleware('auth');
+// Route::post('tasks', CreateTaskController::class)->middleware('auth');
+// Route::patch('tasks/{task}/complete', CompleteTaskController::class)->middleware('auth');
 
-// Sandra testar task view
-Route::view('/test-task', 'testTask')->middleware('auth');
+// // Sandra testar task view
+// Route::view('/test-task', 'testTask')->middleware('auth');
 
 /* --- [ OTHER VIEWS/PAGES ] --- */
 
