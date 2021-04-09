@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
+// use Illuminate\Support\Facades\DB;
 
 //Original
 class UpdateUserController extends Controller
@@ -13,19 +13,12 @@ class UpdateUserController extends Controller
     public function __invoke(Request $request)
     {
         $this->validate($request, [
-            'name'         => ['required', 'string', 'max:12'],
+            'name'         => ['required', 'string'],
             // 'email'        => ['required', 'email', 'unique:users,email'],
             // 'password'     => ['required', 'string', 'min:3'],
         ]);
 
 
-
-
-        // DB::table('users')
-        //     ->updateOrInsert(
-        //         ['name' => 'john@example.com', 'email' => ''],
-        //         // ['votes' => '2']
-        //     );
 
         $user = Auth::user();
         $user->name = $request->input('name');
