@@ -22,9 +22,7 @@
     </div>
 
 
-
-
-<h1 class="mx-6 mr-3 my-3 font-bold text-3xl">Account settings:</h1>
+<h1 class="mx-6 mr-3 my-3 font-bold text-3xl">Account settings</h1>
 
 
 <!-- Edit user settings. -->
@@ -35,15 +33,15 @@
             <label class="m-5 font-semibold mr-1" for="name">Name:</label>
             <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="name" id="name" type="name" placeholder="Person Personson" />
         </div>
-        {{-- <div>
-            <label for="email">E-mail</label>
-            <input name="email" id="email" type="email" />
+       <div>
+            <label class="m-5 font-semibold mr-1" for="email">E-mail</label>
+            <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="email" id="email" type="email" />
         </div>
-        <div>
-            <label for="password">Password</label>
-            <input name="password" id="password" type="password" />
+         <div>
+            <label class="m-5 font-semibold mr-1" for="password">Password</label>
+            <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="password" id="password" type="password" />
         </div>
-        <div>
+        <!-- <div>
             <label for="phone">Phone:</label>
             <input name="phone" id="phone" type="phone" placeholder="070-1234567"/>
         </div>
@@ -64,7 +62,7 @@
         <div>
             <label for="pet_walker">Do you want to walk with a pet?:</label>
             <input name="pet_walker" id="pet_walker" type="pet_walker" placeholder="Yes/No/Details etc."/>
-        </div> --}}
+        </div> -->
         <button class="m-5 mr-4 py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Update</button>
 </form>
 
@@ -94,6 +92,22 @@
                 <input name="pet-img" id="pet-img" type="pet-img"/>
             </div> --}}
             <button class="m-5 mr-4 py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Update</button>
+    </form>
+<br>
+
+<hr class="w-auto h-2 mt-10 bg-blue-200">
+<br>
+
+
+<!-- Delete account -->
+<h2 class="mx-6 mr-3 my-3 font-bold text-2xl">Delete Account</h2>
+<form class="pt-6 ml-6 bg-white shadow rounded col-span-2 max-w-screen-sm" action="delete-user" method="post">
+        @csrf
+        <div>
+            <label class="m-5 font-semibold mr-1" for="name">Are you sure you want to delete the account and all associated data?</label>
+            <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="delete-check" id="delete-check" type="checkbox" required />
+        </div>
+            <button class="m-5 mr-4 py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit" id="delete-user">Delete</button>
     </form>
 <br>
 

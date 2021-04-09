@@ -8,6 +8,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UpdateUserController;
+use App\Http\Controllers\DeleteUserController;
+use App\Http\Controllers\AccountSettingsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,7 +50,12 @@ Route::get('logout', LogoutController::class);
 
 // UPDATE USER
 Route::post('edit-user', UpdateUserController::class);
-Route::view('/accountsettings', 'accountsettings')->name('accountsettings')->middleware('auth');
+
+//Route::view('/accountsettings', 'accountsettings')->name('accountsettings')->middleware('auth');
+Route::get('/accountsettings', AccountSettingsController::class)->middleware('auth');
+
+// DELETE USER (+ THEIR PETS)
+Route::post('delete-user', DeleteUserController::class);
 
 // ADD PET
 Route::post('add-pet', AddPetController::class);
@@ -60,11 +67,11 @@ Route::view('/accountsettings', 'accountsettings')->name('accountsettings')->mid
 /* --- [ TASKS ] --- */
 
 // TASKS
-Route::post('tasks', CreateTaskController::class)->middleware('auth');
-Route::patch('tasks/{task}/complete', CompleteTaskController::class)->middleware('auth');
+// Route::post('tasks', CreateTaskController::class)->middleware('auth');
+// Route::patch('tasks/{task}/complete', CompleteTaskController::class)->middleware('auth');
 
-// Sandra testar task view
-Route::view('/test-task', 'testTask')->middleware('auth');
+// // Sandra testar task view
+// Route::view('/test-task', 'testTask')->middleware('auth');
 
 /* --- [ OTHER VIEWS/PAGES ] --- */
 
