@@ -31,15 +31,15 @@
         @csrf
         <div>
             <label class="m-5 font-semibold mr-1" for="name">Name:</label>
-            <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="name" id="name" type="name" placeholder="Person Personson" />
+            <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="name" id="name" type="name" value="{{ auth()->user()->name }}" placeholder="Person Personson" />
         </div>
        <div>
             <label class="m-5 font-semibold mr-1" for="email">E-mail</label>
-            <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="email" id="email" type="email" />
+            <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="email" id="email" type="email" value="{{ auth()->user()->email }}"/>
         </div>
          <div>
             <label class="m-5 font-semibold mr-1" for="password">Password</label>
-            <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="password" id="password" type="password" />
+            <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="password" id="password" type="password" value="{{ auth()->user()->password }}" />
         </div>
         <!-- <div>
             <label for="phone">Phone:</label>

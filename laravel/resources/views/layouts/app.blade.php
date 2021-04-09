@@ -21,7 +21,7 @@
     <title>Walk My Pet</title>
 </head>
 <body>
-    @yield('content')
+    <!-- @yield('content') -->
 <script src="{{ asset('js/script.js') }}"></script>
 </body>
 </html>

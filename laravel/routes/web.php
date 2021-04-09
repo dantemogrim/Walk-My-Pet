@@ -30,18 +30,23 @@ use Illuminate\Support\Facades\Route;
 
 // START PAGE + LOGIN
 Route::view('/', 'index');
-Route::view('/', 'index')->name('login')->middleware('guest');
+// Onödig med nedan route Route::view('/', 'index')->name('login')->middleware('guest');
+Route::view('/login', 'index')->middleware('guest');
 Route::post('login', LoginController::class);
-Route::get('/login', function () {
-    return view('index');
-});
+
+// Somma som ovan view('/login'):
+//Route::get('/login', function () {
+//     return view('index');
+// });
 
 // REGISTER
-// Route::view('/', 'register')->name('register')->middleware('guest');
+Route::view('/register', 'register')->middleware('guest');
 Route::post('register', RegisterController::class)->name('register')->middleware('guest');
-Route::get('/register', function () {
-    return view('register');
-});
+
+// Onödig:
+//Route::get('/register', function () {
+//     return view('register');
+// });
 
 // LOGOUT
 Route::get('logout', LogoutController::class);
@@ -51,8 +56,8 @@ Route::get('logout', LogoutController::class);
 // UPDATE USER
 Route::post('edit-user', UpdateUserController::class);
 
-//Route::view('/accountsettings', 'accountsettings')->name('accountsettings')->middleware('auth');
-Route::get('/accountsettings', AccountSettingsController::class)->middleware('auth');
+Route::view('/accountsettings', 'accountsettings')->name('profile')->middleware('auth');
+Route::get('accountsettings', AccountSettingsController::class)->middleware('auth');
 
 // DELETE USER (+ THEIR PETS)
 Route::post('delete-user', DeleteUserController::class);
