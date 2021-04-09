@@ -43,25 +43,33 @@
         </div>
         <!-- <div>
             <label for="phone">Phone:</label>
-            <input name="phone" id="phone" type="phone" placeholder="070-1234567"/>
+            <input name="phone" id="phone" type="text" placeholder="070-1234567"/>
         </div>
 
         <div>
             <label for="info">Info:</label>
-            <input name="info" id="info" type="info" placeholder="Write something about yourself."/>
+            <input name="info" id="info" type="text" placeholder="Write something about yourself."/>
         </div>
 
         <div>
             <label for="neighborhood">Neighborhood:</label>
-            <input name="neighborhood" id="neighborhood" type="neighborhood" placeholder="Which neighborhood do you live in?"/>
+            <input name="neighborhood" id="neighborhood" type="text" placeholder="Which neighborhood do you live in?"/>
         </div>
         <div>
             <label for="pet_owner">Do you own a pet?:</label>
-            <input name="pet_owner" id="pet_owner" type="pet_owner" placeholder="Yes/No/Details etc."/>
+            <select name="pet_walker" id="pet_walker">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <input name="pet_owner" id="pet_owner" type="text" placeholder="Yes/No/Details etc."/>
         </div>
         <div>
             <label for="pet_walker">Do you want to walk with a pet?:</label>
-            <input name="pet_walker" id="pet_walker" type="pet_walker" placeholder="Yes/No/Details etc."/>
+            <select name="pet_walker" id="pet_walker">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <input name="pet_walker" id="pet_walker" type="text" placeholder="Yes/No/Details etc."/>
         </div> -->
         <button class="m-5 mr-4 py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Update</button>
 </form>
