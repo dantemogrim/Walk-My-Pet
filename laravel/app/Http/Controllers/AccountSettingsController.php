@@ -26,5 +26,5 @@ class AccountSettingsController extends Controller
 
     //     ]);
     // }
-}
+    }
 }

@@ -1,15 +1,15 @@
 <?php
 
+use App\Http\Controllers\AccountSettingsController;
 use App\Http\Controllers\AddPetController;
 use App\Http\Controllers\CompleteTaskController;
 use App\Http\Controllers\CreateTaskController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DeleteUserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UpdateUserController;
-use App\Http\Controllers\DeleteUserController;
-use App\Http\Controllers\AccountSettingsController;
 use Illuminate\Support\Facades\Route;
 
 /*
