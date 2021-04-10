@@ -15,13 +15,12 @@
     </div>
     <!-- Header - right side. -->
     <div>
-        <a href="#" class="inline-block p-3 text-indigo-200 hover:text-indigo-100 mr-2">About</a>
-        <a href="#" class="inline-block p-3 text-indigo-200 hover:text-indigo-100 mr-2">Contact</a>
-        <a href="/login"><button class="mr-4 py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Login</button></a>
+
+        <a href="/login"><button class="mr-4 py-2 px-4 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Login</button></a>
     </div>
     </div>
 
-<h3 class="m-6 ml-6 font-bold text-3xl">Register:</h3>
+<h3 class="m-6 ml-6 text-3xl">Register:</h3>
 <!-- Register area. -->
 <div class="bg-blue-100 grid grid-cols-4 gap-7">
 
@@ -29,24 +28,24 @@
 <form class="pt-1 ml-6 bg-white shadow rounded col-span-2 max-w-screen-sm" action="register" method="post">
     @csrf
     <div class="m-4 ml-6">
-        <label class="font-semibold mr-1" for="name">Name:</label>
+        <label class="mr-1" for="name">Name:</label>
         <input class="bg-white-100 border-green-500 border-2 rounded-sm" name="name" id="name" type="name" placeholder="Person Personson" required/>
     </div>
     <div class="m-4 ml-6">
-        <label class="font-semibold mr-1" for="email">E-mail:</label>
+        <label class="mr-1" for="email">E-mail:</label>
         <input class="bg-white-100 border-green-500 border-2 rounded-sm" name="email" id="email" type="email" placeholder="person@email.com" required/>
     </div>
     <div class="m-4 ml-6">
-        <label class="font-semibold mr-1" for="password">Password:</label>
+        <label class="mr-1" for="password">Password:</label>
         <input class="bg-white-100 border-green-500 border-2 rounded-sm" name="password" id="password" type="password" placeholder="my-safe-password" required/>
         <br>
-        <small class="m-3 font-semibold mr-1">(Minimum 8 characters.)</small>
+        <small class="m-3 mr-1">(Minimum 8 characters.)</small>
     </div>
     <div class="m-4 ml-6">
-        <label class="font-semibold mr-1" for="password-verify">Confirm password:</label>
+        <label class="mr-1" for="password-verify">Confirm password:</label>
         <input class="bg-white-100 border-green-500 border-2 rounded-sm" name="password-verify" id="password-verify" type="password" placeholder="my-safe-password" required/>
     </div>
-    <button class="ml-6 my-3 py-2 mb-6 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Register</button>
+    <button class="ml-6 my-3 py-2 mb-6 px-4 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Register</button>
 </form>
 <!-- Dog img. -->
 <img class="max-w-xs" src="https://media.giphy.com/media/fr4a7HVNfSutlTv02l/giphy.gif">

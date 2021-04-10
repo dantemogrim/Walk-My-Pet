@@ -14,9 +14,9 @@
 </div>
 <!-- Header - right side. -->
 <div>
-    <a href="#" class="inline-block p-3 text-indigo-200 hover:text-indigo-100 mr-2">About</a>
-    <a href="#" class="inline-block p-3 text-indigo-200 hover:text-indigo-100 mr-2">Contact</a>
-    <a href="/register"><button class="mr-4 py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Register</button></a>
+
+    <a href="/register"><button class="mr-4 py-2 px-4 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Register</button></a>
+
 </div>
 </div>
 
@@ -28,21 +28,21 @@
 </div>
 
 <!-- Login area + img wrapper. -->
-<h1 class="m-1 ml-6 font-bold text-3xl">Login:</h1>
+<h1 class="m-1 ml-6 text-3xl">Login:</h1>
 <div class="bg-blue-100 grid grid-cols-4 gap-7 pt-5">
 
 <!-- Form wrapper. -->
     <form class="pt-6 ml-6 bg-white shadow rounded col-span-2 max-w-screen-sm" action="login" method="post">
     @csrf
     <div class="m-4 ml-6">
-        <label class="font-semibold mr-1" for="email">E-mail:</label>
+        <label class=" mr-1" for="email">E-mail:</label>
         <input class="bg-white-100 border-green-500 border-2 rounded-sm" name="email" id="email" type="email" placeholder="person@email.com" required/>
     </div>
     <div class="m-4 ml-6">
-        <label class="font-semibold mr-1" for="password">Password:</label>
+        <label class="mr-1" for="password">Password:</label>
         <input class="bg-white-100 border-green-500 border-2 rounded-sm" name="password" id="password" type="password" placeholder="my-safe-password"required />
     </div>
-    <button class="ml-6 my-3 py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Login</button>
+    <button class="ml-6 my-3 py-2 px-4 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Login</button>
 </form>
 <!-- Dog img. -->
 <img class="max-w-xs" src="https://media.giphy.com/media/H2fAFoVclDGt4rsskg/giphy.gif">

@@ -10,8 +10,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 <!-- Fonts. -->
+
+<!-- Poppins. -->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+<!-- Poppins bold 700. -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
 
 <style>
     body {

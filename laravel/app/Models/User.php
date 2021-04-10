@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -14,6 +13,7 @@ class User extends Authenticatable
     use HasFactory;
     use Notifiable;
 
+    // Built in Laravel functionalities - no touchy.
     protected $fillable = [
         'name',
         'email',
@@ -26,6 +26,7 @@ class User extends Authenticatable
         'pet_walker',
     ];
 
+    // Built in Laravel functionalities - no touchy.
     protected $hidden = [
         'password',
     ];
@@ -36,18 +37,11 @@ class User extends Authenticatable
         return $this->hasMany(Task::class);
     }
 
-    // Retrieve users pets.
-    public function pets(): hasMany
+    // Retrieve/connect all users pets.
+    public function pets()
     {
-        return $this->hasMany(Pet::class);
+        // Eloquent always assumes that our db tables foreign keys will be named 'user_id'.
+        // Since we've named it something else, 'owner_id', we need to explain the relationship like so:
+        return $this->hasMany(Pet::class, 'owner_id', 'id');
     }
-
-    /* Nu finns en hasOne relation i Pet model, ska det finnas en motsvarande relation på User model?
-    Vet inte om det innebär att en User _måste_ ha en Pet eller om den _kan_ ha en Pet och isf max 1.
-    Typ:
-     public function pets()
-    {
-        return $this->hasOne(Pet::class);
-    }
-     */
 }

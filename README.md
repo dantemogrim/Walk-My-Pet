@@ -38,6 +38,8 @@ How to access this project:
 3. Once your inside, type `composer update` followed by `php artisan serve`. Your command line should now open up a localhost for you,
    where you can see the application.
 
+If you want to access the database functionality of the site, you will need to manually add an .env file (copy + paste the pre-existing '.env.example') and set up a connection to it through MySQL/SQLite.
+
 ## Code Review
 
 By []()
