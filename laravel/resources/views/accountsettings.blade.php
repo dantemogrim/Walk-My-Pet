@@ -61,20 +61,20 @@
             <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="neighborhood" id="neighborhood" type="text" placeholder="Which neighborhood do you live in?"/>
         </div>
         <div>
-            <label class="m-5 mr-1" for="pet_owner">Do you own a pet?:</label>
-            <select name="pet_walker" id="pet_walker">
-                <option class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" value="yes">Yes</option>
-                <option class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" value="no">No</option>
+            <label class="m-5 mr-1" for="pet-owner">Do you own a pet?:</label>
+            <select name="pet-owner" id="pet-owner">
+                <option class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="pet-owner" id="pet-owner" value="Yes">Yes</option>
+                <option class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="pet-owner" id="pet-owner" value="No">No</option>
             </select>
-            <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="pet-owner" id="pet-owner" type="text" placeholder="Yes/No/Details etc."/>
+
         </div>
         <div>
-            <label class="m-5 mr-1" for="pet_walker">Do you want to walk with a pet?:</label>
-            <select name="pet_walker" id="pet_walker">
-                <option class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" value="yes">Yes</option>
-                <option class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" value="no">No</option>
+            <label class="m-5 mr-1" for="pet-walker">Do you want to walk with a pet?:</label>
+            <select name="pet-walker" id="pet-walker">
+                <option class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="pet-walker" id="pet-walker" value="Yes">Yes</option>
+                <option class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="pet-walker" id="pet-walker" value="No">No</option>
             </select>
-            <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="pet-walker" id="pet-walker" type="text" placeholder="Yes/No/Details etc."/>
+
         </div>
         <button class="m-5 mr-4 py-2 px-4 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Update</button>
 </form>
