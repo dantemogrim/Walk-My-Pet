@@ -1,5 +1,4 @@
 @extends('layouts.app')
-@include('errors')
 
 <!-- Full page background wrapper. -->
 <div class="bg-blue-100 min-h-screen">
@@ -28,7 +27,7 @@
 
 
 <h1 class="mx-6 mr-3 my-3 text-3xl pb-3">Account settings</h1>
-
+@include('errors')
 
 <!-- Edit user settings. -->
 <h2 class="mx-6 mr-3 my-3 text-2xl underline">Edit user settings:</h2>
@@ -46,8 +45,8 @@
             <label class="m-5 mr-1" for="password">Password:</label>
             <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="password" id="password" type="password" value="{{ auth()->user()->password }}" />
         </div>
-    </form>
-        {{-- <div>
+
+        <div>
             <label class="m-5 mr-1" for="phone">Phone:</label>
             <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="phone" id="phone" type="text" placeholder="070-1234567"/>
         </div>
@@ -67,7 +66,7 @@
                 <option class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" value="yes">Yes</option>
                 <option class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" value="no">No</option>
             </select>
-            <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="pet_owner" id="pet_owner" type="text" placeholder="Yes/No/Details etc."/>
+            <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="pet-owner" id="pet-owner" type="text" placeholder="Yes/No/Details etc."/>
         </div>
         <div>
             <label class="m-5 mr-1" for="pet_walker">Do you want to walk with a pet?:</label>
@@ -75,10 +74,10 @@
                 <option class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" value="yes">Yes</option>
                 <option class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" value="no">No</option>
             </select>
-            <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="pet_walker" id="pet_walker" type="text" placeholder="Yes/No/Details etc."/>
+            <input class="my-2 bg-white-100 border-green-500 border-2 rounded-sm" name="pet-walker" id="pet-walker" type="text" placeholder="Yes/No/Details etc."/>
         </div>
         <button class="m-5 mr-4 py-2 px-4 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Update</button>
-</form> --}}
+</form>
 
 <hr class="w-auto h-2 mt-10 bg-blue-200">
 <br>
