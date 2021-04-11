@@ -1,5 +1,1 @@
-require('./bootstrap');
-
-
-
-alert('hello world');
+require("./bootstrap");

@@ -74,7 +74,7 @@
                 <option class="" name="pet-walker" id="pet-walker" value="No">No</option>
             </select>
         </div>
-        <button class="m-5 mr-4 py-2 px-4 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Update</button>
+        <button class="m-5 mr-4 py-2 px-4 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit" value="update-user">Update</button>
 </form>
 </div>
 
