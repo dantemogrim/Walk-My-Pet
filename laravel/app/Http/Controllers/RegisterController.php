@@ -17,6 +17,7 @@ class RegisterController extends Controller
             'name'         => ['required', 'string', 'min:2'],
             'email'        => ['required', 'email', 'unique:users,email', 'min:4'],
             'password'     => ['required', 'string', 'min:3'],
+            'password-verify' => ['required', 'string', 'same:password'],
         ]);
 
         $user = new User();

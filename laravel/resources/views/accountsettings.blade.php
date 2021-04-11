@@ -44,7 +44,7 @@
         </div>
          <div>
             <label class="flex m-2 font-bold" for="password">Password:</label>
-            <input class="flex m-2 w-full border-4 border-green-400 px-3 py-2" name="password" id="password" type="password" value="{{ auth()->user()->password }}" />
+            <input class="flex m-2 w-full border-4 border-green-400 px-3 py-2" name="password" id="password" type="password" required value="{{ auth()->user()->password }}" />
         </div>
 
         <div>
