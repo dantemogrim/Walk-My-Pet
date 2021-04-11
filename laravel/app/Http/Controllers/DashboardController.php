@@ -4,17 +4,12 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\Models\Pet;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Collection;
-use Illuminate\Database\Query\Builder;
-
 
 class DashboardController extends Controller
 {
-
     public function __invoke()
     {
         // LOGGED IN USER'S DATA
@@ -36,11 +31,10 @@ class DashboardController extends Controller
         // Attaches our users table with its relationship to our pets table.
         $allUsers = User::with('pets')->get();
 
-
         return view('dashboard', [
             'currentUser' => $currentUser,
-            'usersPets' => $usersPets,
-            'allUsers' => $allUsers,
+            'usersPets'   => $usersPets,
+            'allUsers'    => $allUsers,
 
         ]);
     }
