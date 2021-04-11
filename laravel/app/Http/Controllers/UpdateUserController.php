@@ -8,12 +8,10 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-
 class UpdateUserController extends Controller
 {
     public function __invoke(Request $request, User $user)
     {
-
         $user = Auth::user();
         $user->name = $request->input('name');
         $user->email = $request->input('email');
@@ -24,8 +22,6 @@ class UpdateUserController extends Controller
         $user->pet_owner = $request->input('pet-owner');
         $user->pet_walker = $request->input('pet-walker');
         $user->save();
-
-
 
         return redirect('dashboard');
     }

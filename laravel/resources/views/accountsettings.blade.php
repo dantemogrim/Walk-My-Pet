@@ -43,8 +43,11 @@
             <input class="flex m-2 w-full border-4 border-green-400 px-3 py-2" name="email" id="email" type="email" value="{{ auth()->user()->email }}"/>
         </div>
          <div>
-            <label class="flex m-2 font-bold" for="password">Password:  <span style="color: red;">*</span></label>
-            <input class="flex m-2 w-full border-4 border-green-400 px-3 py-2" name="password" id="password" type="password" required placeholder="Enter current password to update"/>
+            <!-- <label class="flex m-2 font-bold" for="password">Password:  <span style="color: red;">*</span></label>
+            <input class="flex m-2 w-full border-4 border-green-400 px-3 py-2" name="password" id="password" type="password" required placeholder="Enter current password to update"/> -->
+
+            <label class="flex m-2 font-bold" for="password">Password:</label>
+            <input class="flex m-2 w-full border-4 border-green-400 px-3 py-2" name="password" id="password" type="password" required value="{{ auth()->user()->password }}" />
         </div>
 
         <div>

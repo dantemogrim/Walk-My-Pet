@@ -22,16 +22,16 @@ class LoginTest extends TestCase
     public function test_login_user()
     {
         $user = new User();
-        $user->name = 'Mr Robot';
-        $user->email = 'example@yrgo.se';
-        $user->password = Hash::make('123');
+        $user->name = 'Mr Test';
+        $user->email = 'admin@test.se';
+        $user->password = Hash::make('666');
         $user->save();
 
         $response = $this
             ->followingRedirects()
             ->post('login', [
-                'email'    => 'example@yrgo.se',
-                'password' => '123',
+                'email'    => 'admin@test.se',
+                'password' => '666',
             ]);
 
         $response->assertSeeText('');
@@ -42,7 +42,7 @@ class LoginTest extends TestCase
         $response = $this
             ->followingRedirects()
             ->post('login', [
-                'email' => 'example@yrgo.se',
+                'email' => 'admin@test.se',
             ]);
 
         $response->assertSeeText('Something went wrong. Please, try again.');
