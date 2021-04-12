@@ -24,13 +24,7 @@ class UpdateUserController extends Controller
         $user->pet_walker = $request->input('pet-walker');
         $user->save();
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 
-=======
->>>>>>> 05032ceac73ff011e2f64de2550d0f41f374718e
-=======
->>>>>>> Stashed changes
         return redirect('dashboard');
     }
 }

@@ -2,35 +2,19 @@
 
 namespace Tests\Feature;
 
-<<<<<<< Updated upstream
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
-
-class UpdateProfileTest extends TestCase
-{
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
-    public function test_example()
-    {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-=======
 use App\Models\User;
 use App\Models\Pet;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
-use Tests\TestCase;
 use Testsing\TestResponse;
+
 
 class UpdateProfileTest extends TestCase
 {
     use RefreshDatabase;
+
 
     public function test_update_user()
     {
@@ -85,6 +69,6 @@ class UpdateProfileTest extends TestCase
         $response->assertStatus(200);
 
         // $response = $this->get('/dashboard');
->>>>>>> Stashed changes
+
     }
 }

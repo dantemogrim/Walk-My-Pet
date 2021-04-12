@@ -9,19 +9,12 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 
-<<<<<<< Updated upstream
-class RegisterTest extends TestCase
-{
-    use RefreshDatabase;
 
-    public function delete_user()
-=======
 class DeleteUserTest extends TestCase
 {
     use RefreshDatabase;
 
     public function test_delete_user()
->>>>>>> Stashed changes
     {
         $user = new User();
         $user->name = 'Mr Test';
