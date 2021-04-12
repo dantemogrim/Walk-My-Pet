@@ -24,7 +24,6 @@ class UpdateUserController extends Controller
         $user->pet_walker = $request->input('pet-walker');
         $user->save();
 
-
         return redirect('dashboard');
     }
 }

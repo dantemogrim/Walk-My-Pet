@@ -9,7 +9,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 
-
 class DeleteUserTest extends TestCase
 {
     use RefreshDatabase;
@@ -25,7 +24,7 @@ class DeleteUserTest extends TestCase
         $response = $this
             ->followingRedirects()
             ->post('register', [
-                'email' => 'admin@test.se',
+                'email'    => 'admin@test.se',
                 'password' => '666',
             ]);
 
@@ -34,7 +33,7 @@ class DeleteUserTest extends TestCase
         $response = $this
             ->followingRedirects()
             ->post('login', [
-                'email' => 'admin@test.se',
+                'email'    => 'admin@test.se',
                 'password' => '666',
             ]);
 
