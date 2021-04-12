@@ -32,9 +32,6 @@
 
             <input class="flex m-2 w-full border-4 border-green-400 px-3 py-2" name="name" id="name" type="name" value="{{ auth()->user()->name }}"  />
 
-            <input class="flex m-2 w-full border-4 border-green-400 px-3 py-2" name="name" id="name" type="name" value="{{ auth()->user()->name }}" />
-
-            <input class="flex m-2 w-full border-4 border-green-400 px-3 py-2" name="name" id="name" type="name" value="{{ auth()->user()->name }}" />
 
         </div>
        <div>
@@ -49,7 +46,6 @@
             <input class="flex m-2 w-full border-4 border-green-400 px-3 py-2" name="password" id="password" type="password" required placeholder="Enter current password to confirm update"/>
             <!--<input class="flex m-2 w-full border-4 border-green-400 px-3 py-2" name="password" id="password" type="password" required value="{{ auth()->user()->password }}" /> -->
 
-            <input class="flex m-2 w-full border-4 border-green-400 px-3 py-2" name="password" id="password" type="password" required placeholder="Enter your current password" />
         </div>
 
         <div>
