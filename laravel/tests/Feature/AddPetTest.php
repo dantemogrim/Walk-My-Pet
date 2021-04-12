@@ -2,17 +2,16 @@
 
 namespace Tests\Feature;
 
-use App\Models\User;
 use App\Models\Pet;
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 
 class AddPetTest extends TestCase
 {
     use RefreshDatabase;
-
 
     public function test_add_pet()
     {
@@ -29,7 +28,6 @@ class AddPetTest extends TestCase
                 'password' => '666',
             ]);
 
-
         $response = $this->get('/accountsettings');
 
         $pet = new Pet();
@@ -41,9 +39,9 @@ class AddPetTest extends TestCase
 
         $response = $this->followingRedirects()
             ->post('add-pet', [
-                'name' => 'Fido',
-                'info' => 'A very good boy',
-                'species' => 'dog'
+                'name'    => 'Fido',
+                'info'    => 'A very good boy',
+                'species' => 'dog',
             ]);
 
         $response->assertStatus(200);

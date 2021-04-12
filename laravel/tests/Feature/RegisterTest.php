@@ -32,7 +32,7 @@ class RegisterTest extends TestCase
         $response = $this
             ->followingRedirects()
             ->post('register', [
-                'email' => 'admin@test.se',
+                'email'    => 'admin@test.se',
                 'password' => '666',
             ]);
 

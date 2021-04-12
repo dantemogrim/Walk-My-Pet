@@ -2,19 +2,14 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Tests\TestCase;
 use App\Models\User;
-use App\Models\Pet;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Auth;
-use Testsing\TestResponse;
-
+use Tests\TestCase;
 
 class UpdateProfileTest extends TestCase
 {
     use RefreshDatabase;
-
 
     public function test_update_user()
     {
@@ -30,12 +25,11 @@ class UpdateProfileTest extends TestCase
         $response = $this
             ->followingRedirects()
             ->post('register', [
-                'email' => 'admin@test.se',
+                'email'    => 'admin@test.se',
                 'password' => '666',
             ]);
 
         $response = $this->get('/accountsettings');
-
 
         $user->name = 'Ms Best';
         $user->email = 'radmin@test.se';
@@ -49,14 +43,14 @@ class UpdateProfileTest extends TestCase
 
         $response = $this->actingAs($user)
             ->post('edit-user', [
-                'name' => 'Ms Best',
-                'email' => 'radmin@test.se',
-                'password' => '123',
-                'phone' => '0701234567',
-                'info' => 'I am a dog walker!',
+                'name'         => 'Ms Best',
+                'email'        => 'radmin@test.se',
+                'password'     => '123',
+                'phone'        => '0701234567',
+                'info'         => 'I am a dog walker!',
                 'neighborhood' => 'Nowhere Ville',
-                'pet-owner' => '',
-                'pet-walker' => '',
+                'pet-owner'    => '',
+                'pet-walker'   => '',
             ]);
 
         // $response = $this
@@ -69,6 +63,5 @@ class UpdateProfileTest extends TestCase
         $response->assertStatus(200);
 
         // $response = $this->get('/dashboard');
-
     }
 }

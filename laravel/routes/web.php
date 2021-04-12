@@ -1,6 +1,5 @@
 <?php
 
-
 use App\Http\Controllers\AddPetController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DeleteUserController;
@@ -50,7 +49,6 @@ Route::post('delete-user', DeleteUserController::class);
 // ADD PET
 Route::post('add-pet', AddPetController::class);
 Route::view('/accountsettings', 'accountsettings')->name('accountsettings')->middleware('auth');
-
 
 /* --- [ OTHER VIEWS/PAGES ] --- */
 // MAIN PAGE
