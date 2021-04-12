@@ -6,8 +6,6 @@ namespace Tests\Feature;
 
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 
 class RegisterTest extends TestCase
@@ -29,7 +27,7 @@ class RegisterTest extends TestCase
 
         $response = $this->actingAs($user)->followingRedirects()
             ->post('register', [
-                'email'    => '$user->faker->unique()->safeEmail',
+                'email'       => '$user->faker->unique()->safeEmail',
                 'password'    => '123456789',
             ]);
 

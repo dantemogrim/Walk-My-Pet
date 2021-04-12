@@ -7,7 +7,6 @@ namespace Tests\Feature;
 use App\Models\Pet;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class AddPetTest extends TestCase
@@ -16,7 +15,6 @@ class AddPetTest extends TestCase
 
     public function test_add_pet()
     {
-
         $user = User::factory()->create();
         $user->save();
 

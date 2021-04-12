@@ -37,7 +37,6 @@ Route::post('register', RegisterController::class)->name('register')->middleware
 // LOGOUT
 Route::get('logout', LogoutController::class);
 
-
 /* --- [ UPDATE USER SETTINGS ] --- */
 
 // UPDATE USER
@@ -50,7 +49,6 @@ Route::post('delete-user', DeleteUserController::class);
 // ADD PET
 Route::post('add-pet', AddPetController::class);
 Route::view('/accountsettings', 'accountsettings')->name('accountsettings')->middleware('auth');
-
 
 /* --- [ OTHER VIEWS/PAGES ] --- */
 
