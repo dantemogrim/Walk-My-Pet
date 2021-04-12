@@ -29,11 +29,15 @@
         @csrf
         <div>
             <label class="flex m-2 font-bold" for="name">Name:  <span style="color: red;">*</span></label>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
             <input class="flex m-2 w-full border-4 border-green-400 px-3 py-2" name="name" id="name" type="name" value="{{ auth()->user()->name }}"  />
 =======
             <input class="flex m-2 w-full border-4 border-green-400 px-3 py-2" name="name" id="name" type="name" value="{{ auth()->user()->name }}" />
 >>>>>>> 05032ceac73ff011e2f64de2550d0f41f374718e
+=======
+            <input class="flex m-2 w-full border-4 border-green-400 px-3 py-2" name="name" id="name" type="name" value="{{ auth()->user()->name }}" />
+>>>>>>> Stashed changes
         </div>
        <div>
             <label class="flex m-2 font-bold" for="email">E-mail:  <span style="color: red;">*</span></label>
@@ -41,12 +45,16 @@
         </div>
          <div>
             <label class="flex m-2 font-bold" for="password">Password:  <span style="color: red;">*</span></label>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
             <input class="flex m-2 w-full border-4 border-green-400 px-3 py-2" name="password" id="password" type="password" required placeholder="Enter your current password" />
 =======
             <input class="flex m-2 w-full border-4 border-green-400 px-3 py-2" name="password" id="password" type="password" required placeholder="Enter current password to confirm update"/>
             <!--<input class="flex m-2 w-full border-4 border-green-400 px-3 py-2" name="password" id="password" type="password" required value="{{ auth()->user()->password }}" /> -->
 >>>>>>> 05032ceac73ff011e2f64de2550d0f41f374718e
+=======
+            <input class="flex m-2 w-full border-4 border-green-400 px-3 py-2" name="password" id="password" type="password" required placeholder="Enter your current password" />
+>>>>>>> Stashed changes
         </div>
 
         <div>

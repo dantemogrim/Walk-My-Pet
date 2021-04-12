@@ -13,7 +13,11 @@ class AddPetTest extends TestCase
 {
     use RefreshDatabase;
 
+<<<<<<< Updated upstream
     public function add_pet_test()
+=======
+    public function test_add_pet()
+>>>>>>> Stashed changes
     {
         $user = new User();
         $user->name = 'Mr Test';
@@ -28,6 +32,11 @@ class AddPetTest extends TestCase
                 'password' => '666',
             ]);
 
+<<<<<<< Updated upstream
+=======
+        $response = $this->get('/accountsettings');
+
+>>>>>>> Stashed changes
         $pet = new Pet();
         $pet->owner_id = Auth::id();
         $pet->name = 'Fido';
