@@ -9,17 +9,19 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 
-class LoginTest extends TestCase
+class RegisterTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_view_login_form()
+    // Checks /register url.
+    public function test_view_register_form()
     {
-        $response = $this->get('/');
+        $response = $this->get('/register');
         $response->assertStatus(200);
     }
 
-    public function test_login_user()
+    // Check register form.
+    public function test_register_user()
     {
         $user = new User();
         $user->name = 'Mr Test';
@@ -29,20 +31,9 @@ class LoginTest extends TestCase
 
         $response = $this
             ->followingRedirects()
-            ->post('login', [
-                'email'    => 'admin@test.se',
-                'password' => '666',
-            ]);
-
-        $response->assertStatus(200);
-    }
-
-    public function test_login_user_without_password()
-    {
-        $response = $this
-            ->followingRedirects()
-            ->post('login', [
+            ->post('register', [
                 'email' => 'admin@test.se',
+                'password' => '666',
             ]);
 
         $response->assertStatus(200);

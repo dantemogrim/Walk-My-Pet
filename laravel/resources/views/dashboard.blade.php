@@ -14,13 +14,6 @@
     </div>
     <!-- Header - right side. -->
     <div>
-        <p class="m-1 inline-block">🐶</p>
-        <p class="inline-block text-white m-1">Sort by:</p>
-        <a href="#" class="inline-block text-indigo-200 hover:text-indigo-100 m-1">Neighborhood</a>
-        <a href="#" class="inline-block mr-1 text-indigo-200 hover:text-indigo-100 m-1">Species</a>
-        <p class="m-1 inline-block">🐶</p>
-
-
         <a href="/accountsettings"><button class="m-5 mr-4 py-2 px-4 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Account</button></a>
 
         <a href="logout"><button class="m-5 mr-4 py-2 px-4 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" type="submit">Logout</button></a>

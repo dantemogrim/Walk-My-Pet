@@ -1,25 +1,19 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Tests\Feature;
 
 use App\Models\User;
+use App\Models\Pet;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 use Tests\TestCase;
 
-class LoginTest extends TestCase
+class AddPetTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_view_login_form()
-    {
-        $response = $this->get('/');
-        $response->assertStatus(200);
-    }
-
-    public function test_login_user()
+    public function add_pet_test()
     {
         $user = new User();
         $user->name = 'Mr Test';
@@ -34,15 +28,18 @@ class LoginTest extends TestCase
                 'password' => '666',
             ]);
 
-        $response->assertStatus(200);
-    }
+        $pet = new Pet();
+        $pet->owner_id = Auth::id();
+        $pet->name = 'Fido';
+        $pet->info = 'A very good boy';
+        $pet->species = 'dog';
+        $pet->save();
 
-    public function test_login_user_without_password()
-    {
-        $response = $this
-            ->followingRedirects()
-            ->post('login', [
-                'email' => 'admin@test.se',
+        $response = $this->followingRedirects()
+            ->post('add-pet', [
+                'name' => 'Fido',
+                'info' => 'A very good boy',
+                'species' => 'dog'
             ]);
 
         $response->assertStatus(200);

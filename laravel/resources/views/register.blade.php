@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-
 <!-- Full page background wrapper. -->
 <div class="bg-blue-100 min-h-screen">
 
