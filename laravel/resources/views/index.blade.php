@@ -48,10 +48,8 @@
 <img class="max-w-xs" src="https://media.giphy.com/media/H2fAFoVclDGt4rsskg/giphy.gif">
 </div>
 
-
-
 @include('errors')
-<!-- Footer. -->
+
 
 
 <!-- Full page background wrapper - end.  -->

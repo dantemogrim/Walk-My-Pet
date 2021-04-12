@@ -25,10 +25,11 @@ School assignment with purpose of getting a better understanding of writing back
 - The code syntax must adhere to the PSR-12 standard. If not, your project wont be approved and you'll get an extra assignment.
 - Install the [Clockwork](https://github.com/itsgoingd/clockwork) extension in order to find issues such as [N+1 problem](https://laracasts.com/lessons/eager-loading) in your Laravel application.
 - Oh, by the way, you can't use any fancy-pantzy JavaScript frameworks, **this is a backend assignment**. If you do want to write JavaScript it should be vanilla and just some basic stuff. Discuss this with your teacher.
+</details>
 
 ## Instructions
 
-_Prerequisites: you will need to have composer installed in order to open up this project._
+_Prerequisites: you will need to have [Composer](https://getcomposer.org/) installed in order to open up this project._
 
 How to access this project:
 

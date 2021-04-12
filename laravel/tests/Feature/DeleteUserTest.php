@@ -6,7 +6,7 @@ namespace Tests\Feature;
 
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class DeleteUserTest extends TestCase
@@ -15,30 +15,14 @@ class DeleteUserTest extends TestCase
 
     public function test_delete_user()
     {
-        $user = new User();
-        $user->name = 'Mr Test';
-        $user->email = 'admin@test.se';
-        $user->password = Hash::make('666');
-        $user->save();
 
-        $response = $this
+        $user = User::factory()->create();
+
+        $response = $this->actingAs($user)
             ->followingRedirects()
-            ->post('register', [
-                'email'    => 'admin@test.se',
-                'password' => '666',
-            ]);
+            ->post('delete-user');
 
+        $response = $this->get('/');
         $response->assertStatus(200);
-
-        $response = $this
-            ->followingRedirects()
-            ->post('login', [
-                'email'    => 'admin@test.se',
-                'password' => '666',
-            ]);
-
-        $response = $this->get('/accountsettings');
-        $response = $this->post('delete-user');
-        $response = $this->get('/login');
     }
 }

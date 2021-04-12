@@ -1,12 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Feature;
 
 use App\Models\Pet;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class AddPetTest extends TestCase
@@ -15,33 +16,24 @@ class AddPetTest extends TestCase
 
     public function test_add_pet()
     {
-        $user = new User();
-        $user->name = 'Mr Test';
-        $user->email = 'admin@test.se';
-        $user->password = Hash::make('666');
-        $user->save();
 
-        $response = $this
-            ->followingRedirects()
-            ->post('login', [
-                'email'    => 'admin@test.se',
-                'password' => '666',
-            ]);
+        $user = User::factory()->create();
+        $user->save();
 
         $response = $this->get('/accountsettings');
 
         $pet = new Pet();
-        $pet->owner_id = Auth::id();
+        $pet->owner_id = $user->id;
         $pet->name = 'Fido';
-        $pet->info = 'A very good boy';
-        $pet->species = 'dog';
+        $pet->info = 'Wants to go for walks on Mondays.';
+        $pet->species = 'Dog';
         $pet->save();
 
-        $response = $this->followingRedirects()
+        $response = $this->actingAs($user)->followingRedirects()
             ->post('add-pet', [
                 'name'    => 'Fido',
-                'info'    => 'A very good boy',
-                'species' => 'dog',
+                'info'    => 'Wants to go for walks on Tuesdays.',
+                'species' => 'Dog',
             ]);
 
         $response->assertStatus(200);

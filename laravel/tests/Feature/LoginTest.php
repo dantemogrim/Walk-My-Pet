@@ -6,6 +6,7 @@ namespace Tests\Feature;
 
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 
@@ -13,7 +14,7 @@ class LoginTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_view_login_form()
+    public function test_view_login_blade()
     {
         $response = $this->get('/');
         $response->assertStatus(200);
@@ -21,17 +22,13 @@ class LoginTest extends TestCase
 
     public function test_login_user()
     {
-        $user = new User();
-        $user->name = 'Mr Test';
-        $user->email = 'admin@test.se';
-        $user->password = Hash::make('666');
-        $user->save();
+        $user = User::factory()->create();
 
-        $response = $this
+        $response = $this->actingAs($user)
             ->followingRedirects()
             ->post('login', [
-                'email'    => 'admin@test.se',
-                'password' => '666',
+                'email'    => '$user->faker->unique()->safeEmail',
+                'password' => '123456789',
             ]);
 
         $response->assertStatus(200);
@@ -39,12 +36,14 @@ class LoginTest extends TestCase
 
     public function test_login_user_without_password()
     {
-        $response = $this
+        $user = User::factory()->create();
+
+        $response = $this->actingAs($user)
             ->followingRedirects()
             ->post('login', [
-                'email' => 'admin@test.se',
+                'email' => '$user->faker->unique()->safeEmail',
             ]);
 
-        $response->assertStatus(200);
+        $response->assertSeeText('Something went wrong. Please, try again.');
     }
 }

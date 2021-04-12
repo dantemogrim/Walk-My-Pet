@@ -6,6 +6,7 @@ namespace Tests\Feature;
 
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 
@@ -13,29 +14,25 @@ class RegisterTest extends TestCase
 {
     use RefreshDatabase;
 
-    // Checks /register url.
-    public function test_view_register_form()
+    // Check /register url.
+    public function test_view_register_blade()
     {
         $response = $this->get('/register');
         $response->assertStatus(200);
     }
 
     // Check register form.
-    public function test_register_user()
+    public function test_register_user_form()
     {
-        $user = new User();
-        $user->name = 'Mr Test';
-        $user->email = 'admin@test.se';
-        $user->password = Hash::make('666');
+        $user = User::factory()->create();
         $user->save();
 
-        $response = $this
-            ->followingRedirects()
+        $response = $this->actingAs($user)->followingRedirects()
             ->post('register', [
-                'email'    => 'admin@test.se',
-                'password' => '666',
+                'email'    => '$user->faker->unique()->safeEmail',
+                'password'    => '123456789',
             ]);
 
-        $response->assertStatus(200);
+        $response->assertSeeText('Welcome');
     }
 }
