@@ -9,12 +9,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
-
 class UpdateUserController extends Controller
 {
     public function __invoke(Request $request, User $user)
     {
-
         $user = Auth::user();
         $user->name = $request->input('name');
         $user->email = $request->input('email');
@@ -26,7 +24,10 @@ class UpdateUserController extends Controller
         $user->pet_walker = $request->input('pet-walker');
         $user->save();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 05032ceac73ff011e2f64de2550d0f41f374718e
         return redirect('dashboard');
     }
 }
