@@ -9,17 +9,11 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 
-class LoginTest extends TestCase
+class DeleteUserTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_view_login_form()
-    {
-        $response = $this->get('/');
-        $response->assertStatus(200);
-    }
-
-    public function test_login_user()
+    public function test_delete_user()
     {
         $user = new User();
         $user->name = 'Mr Test';
@@ -29,22 +23,22 @@ class LoginTest extends TestCase
 
         $response = $this
             ->followingRedirects()
-            ->post('login', [
+            ->post('register', [
                 'email'    => 'admin@test.se',
                 'password' => '666',
             ]);
 
         $response->assertStatus(200);
-    }
 
-    public function test_login_user_without_password()
-    {
         $response = $this
             ->followingRedirects()
             ->post('login', [
-                'email' => 'admin@test.se',
+                'email'    => 'admin@test.se',
+                'password' => '666',
             ]);
 
-        $response->assertStatus(200);
+        $response = $this->get('/accountsettings');
+        $response = $this->post('delete-user');
+        $response = $this->get('/login');
     }
 }

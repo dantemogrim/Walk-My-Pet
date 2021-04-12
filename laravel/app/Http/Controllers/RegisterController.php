@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
 use App\Models\User;
@@ -12,23 +14,22 @@ class RegisterController extends Controller
     public function __invoke(Request $request)
     {
         $this->validate($request, [
-            'name'     => ['required', 'string', 'max:18', 'unique:users,name'],
-            'email'    => ['required', 'email', 'unique:users,email'],
-            'password' => ['required', 'string', 'min:3'],
-            // TODO: 'phone' => ['', 'integer', 'min:10']
-
-            // Not needed for db input
-
+            'name'            => ['required', 'string', 'min:2'],
+            'email'           => ['required', 'email', 'unique:users,email', 'min:4'],
+            'password'        => ['required', 'string', 'min:3'],
+            'password-verify' => ['required', 'string', 'same:password'],
         ]);
 
-        $newUser = new User();
-        $newUser->name = $request->input('name');
-        $newUser->email = $request->input('email');
-        $newUser->password = Hash::make($request->input('password'));
-        $newUser->phone = $request->input('phone');
-        $newUser->save();
+        $user = new User();
+        $user->neighborhood = $request->input('neighborhood');
+        $user->phone = $request->input('phone');
+        $user->email = $request->input('email');
+        $user->info = $request->input('info');
+        $user->name = $request->input('name');
+        $user->password = Hash::make($request->input('password'));
+        $user->save();
 
-        Auth::login($newUser);
+        Auth::login($user);
 
         return redirect('dashboard');
     }

@@ -17,18 +17,6 @@ class LoginController extends Controller
             return redirect('dashboard');
         }
 
-        return back()->withErrors('Something went horribly wrong :(');
+        return back()->withErrors('Something went wrong. Please, try again.');
     }
 }
-
-/* Original in backlog */
-
-/* I Todo app:
-
-if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-
-            return redirect()->intended('dashboard');
-        }
-
-*/

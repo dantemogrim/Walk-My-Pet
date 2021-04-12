@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\CompleteTaskController;
-use App\Http\Controllers\CreateTaskController;
+use App\Http\Controllers\AddPetController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DeleteUserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UpdateUserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,23 +17,39 @@ use Illuminate\Support\Facades\Route;
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
+
+    Docs: "If your route only needs to return a view,
+    you may use the Route::view method"
 |
 */
 
-Route::view('/', 'index')->name('login')->middleware('guest');
+/* --- [ LOGIN SYSTEM ] --- */
+
+// START PAGE + LOGIN
+Route::view('/', 'index');
+Route::view('/login', 'index')->middleware('guest');
 Route::post('login', LoginController::class);
 
-Route::view('/', 'index')->name('register')->middleware('guest');
-Route::post('register', RegisterController::class);
+// REGISTER
+Route::view('/register', 'register')->middleware('guest');
+Route::post('register', RegisterController::class)->name('register')->middleware('guest');
 
-// Register page
-Route::get('/register', function () {
-    return view('register');
-});
-
+// LOGOUT
 Route::get('logout', LogoutController::class);
-Route::get('dashboard', DashboardController::class)->middleware('auth');
-Route::post('tasks', CreateTaskController::class)->middleware('auth');
-Route::patch('tasks/{task}/complete', CompleteTaskController::class)->middleware('auth');
 
-// Route::view('/', 'index')->name('register')->middleware('guest');
+/* --- [ UPDATE USER SETTINGS ] --- */
+
+// UPDATE USER
+Route::post('edit-user', UpdateUserController::class);
+Route::view('/accountsettings', 'accountsettings')->name('profile')->middleware('auth');
+
+// DELETE USER (+ THEIR PETS)
+Route::post('delete-user', DeleteUserController::class);
+
+// ADD PET
+Route::post('add-pet', AddPetController::class);
+Route::view('/accountsettings', 'accountsettings')->name('accountsettings')->middleware('auth');
+
+/* --- [ OTHER VIEWS/PAGES ] --- */
+// MAIN PAGE
+Route::get('dashboard', DashboardController::class)->middleware('auth');

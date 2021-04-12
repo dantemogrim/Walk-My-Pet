@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class Users extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
@@ -22,8 +17,8 @@ class Users extends Migration
             $table->string('info')->nullable();
             $table->string('profile_img')->nullable();
             $table->string('neighborhood')->nullable();
-            $table->boolean('pet_owner')->nullable();
-            $table->boolean('pet_walker')->nullable();
+            $table->string('pet_owner')->nullable();
+            $table->string('pet_walker')->nullable();
             $table->timestamps();
         });
     }

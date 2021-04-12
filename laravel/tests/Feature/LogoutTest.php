@@ -6,21 +6,18 @@ namespace Tests\Feature;
 
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 
-class LoginTest extends TestCase
+class LogoutTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_view_login_form()
+    public function test_logout_user()
     {
-        $response = $this->get('/');
-        $response->assertStatus(200);
-    }
 
-    public function test_login_user()
-    {
+        // Log in user
         $user = new User();
         $user->name = 'Mr Test';
         $user->email = 'admin@test.se';
@@ -34,16 +31,11 @@ class LoginTest extends TestCase
                 'password' => '666',
             ]);
 
-        $response->assertStatus(200);
-    }
+        $response = $this->get('logout');
 
-    public function test_login_user_without_password()
-    {
-        $response = $this
-            ->followingRedirects()
-            ->post('login', [
-                'email' => 'admin@test.se',
-            ]);
+        Auth::logout();
+
+        $response = $this->get('/');
 
         $response->assertStatus(200);
     }

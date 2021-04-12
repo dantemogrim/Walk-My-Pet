@@ -28,30 +28,50 @@ School assignment with purpose of getting a better understanding of writing back
 
 ## Instructions
 
-## Testers
+_Prerequisites: you will need to have composer installed in order to open up this project._
 
-- [Person 1]()
-- [Person 2]()
+How to access this project:
+
+1. Press the green 'Code' button on GitHub to download this repository
+   locally to your compouter.
+2. Open up your CLI and `cd` into the project folder.
+3. Once your inside, type `composer update` followed by `php artisan serve`. Your command line should now open up a localhost for you,
+   where you can see the application.
+
+If you want to access the database functionality of the site, you will need to manually add an .env file (copy + paste the pre-existing '.env.example') and set up a connection to it through MySQL/SQLite.
 
 ## Code Review
 
-By [Person 3]()
+By []()
 
-- [ ] **style.css:L3**This
-- [ ] **index.php:L54** This thing
-- [ ] Third
-- [ ] Fourth
-- [ ] Fifth
-- [ ] Sixth
-- [ ] Seventh
-- [ ] Eighth
-- [ ] Ninth
-- [ ] Tenth
-  > "Comment" - Person 3
+- [ ] **1.**
+- [ ] **2.**
+- [ ] **3.**
+- [ ] **4.**
+- [ ] **5.**
+- [ ] **6.**
+- [ ] **7.**
+- [ ] **8.**
+- [ ] **9.**
+- [ ] **11.**
+- [ ] **11.**
+- [ ] **12.**
+- [ ] **13.**
+- [ ] **14.**
+- [ ] **15.**
+- [ ] **16.**
+- [ ] **17.**
+- [ ] **18.**
+- [ ] **19.**
+- [ ] **20.**
+
+  > "Comment" -
 
 ## Creators
 
-[Person]()
+[Dante Mogrim](https://github.com/mogrim-91)
+[Eric White](https://github.com/nausea87)
+[Sandra Danielsson](https://github.com/San-Dan)
 
 ## License
 
