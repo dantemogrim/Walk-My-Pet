@@ -18,7 +18,9 @@ class DeleteUserTest extends TestCase
 
         $response = $this->actingAs($user)
             ->followingRedirects()
-            ->post('delete-user');
+            ->post('delete-user', ['delete-check' => 'delete-input']);
+
+        $response = $this->assertDatabaseMissing('users', ['name' => $user->name]);
 
         $response = $this->get('/');
         $response->assertStatus(200);

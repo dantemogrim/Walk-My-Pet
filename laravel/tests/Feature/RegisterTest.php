@@ -22,14 +22,19 @@ class RegisterTest extends TestCase
     // Check register form.
     public function test_register_user_form()
     {
-        $user = User::factory()->create();
-        $user->save();
 
-        $response = $this->actingAs($user)->followingRedirects()
+        $response = $this->followingRedirects()
             ->post('register', [
-                'email'       => '$user->faker->unique()->safeEmail',
+                'name'       => 'Person Personson',
+                'email'       => 'person@personson.com',
                 'password'    => '123456789',
+                'password-verify'    => '123456789',
             ]);
+
+
+        $this->assertDatabaseHas('users', [
+            'email' => 'person@personson.com'
+        ]);
 
         $response->assertSeeText('Welcome');
     }
