@@ -21,12 +21,10 @@ class RegisterController extends Controller
         ]);
 
         $user = new User();
-        $user->neighborhood = $request->input('neighborhood');
-        $user->phone = $request->input('phone');
-        $user->email = $request->input('email');
-        $user->info = $request->input('info');
         $user->name = $request->input('name');
+        $user->email = $request->input('email');
         $user->password = Hash::make($request->input('password'));
+
         $user->save();
 
         Auth::login($user);

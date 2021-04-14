@@ -17,7 +17,6 @@ class CreatePetsTable extends Migration
             $table->string('name');
             $table->string('species')->nullable();
             $table->string('info')->nullable();
-            $table->string('profile_img')->nullable();
             $table->timestamps();
         });
     }

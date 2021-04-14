@@ -17,7 +17,6 @@ class Users extends Migration
             $table->string('password');
             $table->unsignedInteger('phone')->nullable();
             $table->string('info')->nullable();
-            $table->string('profile_img')->nullable();
             $table->string('neighborhood')->nullable();
             $table->string('pet_owner')->nullable();
             $table->string('pet_walker')->nullable();
