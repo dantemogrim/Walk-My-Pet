@@ -68,7 +68,7 @@ By []()
 
 ## Creators
 
-- [Dante Mogrim](https://github.com/mogrim-91)
+- [Dante Mogrim](https://github.com/dantemogrim)
 - [Erik White](https://github.com/nausea87)
 - [Sandra Danielsson](https://github.com/San-Dan)
 
