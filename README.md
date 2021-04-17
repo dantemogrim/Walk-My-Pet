@@ -1,10 +1,10 @@
-# Walk my Pet
+# Walk My Pet
 
 <img src="https://media.giphy.com/media/l2Jef0umWXJsNP0lO/giphy.gif" width="100%">
 
-School assignment with purpose of getting a better understanding of writing backend applications.
+School assignment with purpose of getting a better understanding of writing backend applications in Laravel.
 
-## About
+## :dog: About
 
 <details><summary> <b>Required Laravel features:</b></summary>
 - Controllers
@@ -27,23 +27,23 @@ School assignment with purpose of getting a better understanding of writing back
 - Oh, by the way, you can't use any fancy-pantzy JavaScript frameworks, **this is a backend assignment**. If you do want to write JavaScript it should be vanilla and just some basic stuff. Discuss this with your teacher.
 </details>
 
-## Instructions
+## :rabbit: Instructions
 
-_Prerequisites: you will need to have [Composer](https://getcomposer.org/) installed in order to open up this project._
+_Prerequisites: You will need to have [Composer](https://getcomposer.org/), [NPM](https://formulae.brew.sh/formula/node) and [PHP](https://formulae.brew.sh/formula/php) installed in order to open up this project on your computer._
 
-How to access this project:
+How to access:
 
-1. Press the green 'Code' button on GitHub to download this repository
-   locally to your compouter.
+1. Press the green 'Code' button on GitHub to download it locally.
 2. Open up your CLI and `cd` into the project folder.
-3. Once your inside, type `composer update` followed by `php artisan serve`. Your command line should now open up a localhost for you,
-   where you can see the application.
+3. In your CLI, copy the `.env` file by typing in: `cp .env.example .env`.
+4. In your CLI, generate a key by typing: `php artisan key:generate`.
+5. Go to the `.env` file that you created and set your preferred database settings plus the generated key.
+6. In your CLI, run database migrations by typing: `php artisan migrate`.
+7. In your CLI, type `composer update` followed by `php artisan serve`. Your command line should now have opened up a localhost for you, where you can see the application.
 
-If you want to access the database functionality of the site, you will need to manually add an .env file (copy + paste the pre-existing '.env.example') and set up a connection to it through MySQL/SQLite.
+## :koala: Code Review
 
-## Code Review
-
-By []()
+By [Jakob Gustafsson](https://github.com/gusjak)
 
 - [ ] **1.** `UpdateUserController.php` When updating your information you can send a success message with like `return redirect('dashboard')->with('success', 'Your profile has been updated')` and add `@if(session('success')) -- display message -- @endif` to your `dashboard.blade.php`.
 - [ ] **2.** When you update your email to one that already exists, you get redirected to a `SQLSTATE[23000]`, try to add a similar `@error-handling` to your accountsettings-form as you have in your registrationform.
@@ -64,14 +64,14 @@ By []()
 - [ ] **17.** Try and tell the user what specifically went wrong when logging in, was the email wrong? Or the password?**
 - [ ] **18.** If there are a lot of users showing on the dashboard, it can be hard to find yourself. Maybe there is a way to show the logged in user at the very top or make it stand out in the list.
 - [ ] **19.** Is the name of the user supposed both first name and last name? It seems to be the case as the placeholder is `Person Personson`, but the minimum amount of characters required are 2. It might be nitpicking at best, but maybe it's less confusing to make one input for the first name and one for the last name?
-- [ ] **20.** Great job! You have created a fun an imaginative app!
+- [x] **20.** Great job! You have created a fun an imaginative app!
 
-## Creators
+## :monkey_face: Creators
 
 - [Dante Mogrim](https://github.com/dantemogrim)
 - [Erik White](https://github.com/nausea87)
 - [Sandra Danielsson](https://github.com/San-Dan)
 
-## License
+## :pig: License
 
 [MIT](https://en.wikipedia.org/wiki/MIT_License)
