@@ -2,9 +2,8 @@
 
 <img src="https://media.giphy.com/media/l2Jef0umWXJsNP0lO/giphy.gif" width="100%">
 
-School assignment with purpose of getting a better understanding of writing backend applications in Laravel.
-
 ## :dog: About
+School assignment with purpose of getting a better understanding of writing backend applications in Laravel.
 
 <details><summary> <b>Required Laravel features:</b></summary>
 - Controllers
@@ -72,6 +71,6 @@ By [Jakob Gustafsson](https://github.com/gusjak)
 - [Erik White](https://github.com/nausea87)
 - [Sandra Danielsson](https://github.com/San-Dan)
 
-## :pig: License
+## :turtle: License
 
 [MIT](https://en.wikipedia.org/wiki/MIT_License)
