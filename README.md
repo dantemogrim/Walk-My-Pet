@@ -5,7 +5,7 @@
 ## :dog: About
 School assignment with purpose of getting a better understanding of writing backend applications in Laravel.
 
-<details><summary> <b>Required Laravel features:</b></summary>
+<details><summary> <i>Required Laravel features:</i></summary>
 - Controllers
 - Migrations
 - HTTP Tests (on all routes)
@@ -18,7 +18,7 @@ School assignment with purpose of getting a better understanding of writing back
 - Validation
 - Views (Blade)
 </details>
-<details><summary> <b>Other requirements:</b></summary>
+<details><summary> <i>Other requirements:</i></summary>
 - The application idea should be discussed with the teacher and be given an OK before you get started.
 - Each group should write a code review of at least 20 comments on the next groups project the day before presentations.
 - The code syntax must adhere to the PSR-12 standard. If not, your project wont be approved and you'll get an extra assignment.
@@ -42,7 +42,8 @@ How to access:
 
 ## :koala: Code Review
 
-By [Jakob Gustafsson](https://github.com/gusjak)
+<details><summary> <i>By<a href="https://github.com/gusjak"> Jakob Gustafsson</a>:</i></summary>
+
 
 - [ ] **1.** `UpdateUserController.php` When updating your information you can send a success message with like `return redirect('dashboard')->with('success', 'Your profile has been updated')` and add `@if(session('success')) -- display message -- @endif` to your `dashboard.blade.php`.
 - [ ] **2.** When you update your email to one that already exists, you get redirected to a `SQLSTATE[23000]`, try to add a similar `@error-handling` to your accountsettings-form as you have in your registrationform.
@@ -64,6 +65,12 @@ By [Jakob Gustafsson](https://github.com/gusjak)
 - [ ] **18.** If there are a lot of users showing on the dashboard, it can be hard to find yourself. Maybe there is a way to show the logged in user at the very top or make it stand out in the list.
 - [ ] **19.** Is the name of the user supposed both first name and last name? It seems to be the case as the placeholder is `Person Personson`, but the minimum amount of characters required are 2. It might be nitpicking at best, but maybe it's less confusing to make one input for the first name and one for the last name?
 - [x] **20.** Great job! You have created a fun an imaginative app!
+</details>
+
+## :ant: Stack
+- <img src="https://img.shields.io/badge/Laravel-FF2D20?style=flat&logo=laravel&logoColor=white" alt="Laravel"/>
+- <img src="https://img.shields.io/badge/Laravel_Mix-6BA4E3?style=flat&logo=laravel&logoColor=white" alt="Laravel Mix" />
+- <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=plastic&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
 
 ## :monkey_face: Creators
 
@@ -73,4 +80,4 @@ By [Jakob Gustafsson](https://github.com/gusjak)
 
 ## :turtle: License
 
-[MIT](https://en.wikipedia.org/wiki/MIT_License)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
