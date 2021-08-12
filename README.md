@@ -3,10 +3,12 @@
 <img src="https://media.giphy.com/media/l2Jef0umWXJsNP0lO/giphy.gif" width="100%">
 
 ## :dog: About
-School assignment with purpose of getting a better understanding of writing backend applications in Laravel.
+A group assignment with the purpose of better understanding backend applications in Laravel.
+Our group decided to create a social platform on which people can register as either pet owners, pet walkers or both and exchange services to one another.
 
 <details><summary> <i>Required Laravel features:</i></summary>
-- Controllers
+
+- Controllers 
 - Migrations
 - HTTP Tests (on all routes)
 - Laravel Mix
@@ -18,8 +20,10 @@ School assignment with purpose of getting a better understanding of writing back
 - Validation
 - Views (Blade)
 </details>
+
 <details><summary> <i>Other requirements:</i></summary>
-- The application idea should be discussed with the teacher and be given an OK before you get started.
+
+  - The application idea should be discussed with the teacher and be given an OK before you get started.
 - Each group should write a code review of at least 20 comments on the next groups project the day before presentations.
 - The code syntax must adhere to the PSR-12 standard. If not, your project wont be approved and you'll get an extra assignment.
 - Install the [Clockwork](https://github.com/itsgoingd/clockwork) extension in order to find issues such as [N+1 problem](https://laracasts.com/lessons/eager-loading) in your Laravel application.
@@ -67,7 +71,7 @@ How to access:
 - [x] **20.** Great job! You have created a fun an imaginative app!
 </details>
 
-## :ant: Stack
+## :ant: Tools
 - <img src="https://img.shields.io/badge/Laravel-FF2D20?style=flat&logo=laravel&logoColor=white" alt="Laravel"/>
 - <img src="https://img.shields.io/badge/Laravel_Mix-6BA4E3?style=flat&logo=laravel&logoColor=white" alt="Laravel Mix" />
 - <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=plastic&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
